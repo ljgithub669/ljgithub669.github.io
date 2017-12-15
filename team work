@@ -1,0 +1,6 @@
+just add
+#include <stdio.h>
+void delay(int i)
+{
+while(i--);
+}
