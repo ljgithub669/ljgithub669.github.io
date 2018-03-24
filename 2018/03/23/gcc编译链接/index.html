@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>gcc编译连接 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在Windows的DOS下实现gcc编译和链接这里主要看的是两篇写的很详细的文章 C语言多文件编译初探（一） C语言多文件编译初探（二）  1.首先，你的Windows电脑的编译器需要是gcc,不清楚的话按win+r,输入cmd，打开DOS命令行界面。然后输入gcc -v,这个是用来查看你gcc版本的，如果提示不是内部或外部指令，则你的编译器不是gcc。反之，如果出现如下图片，则可以进行下一步了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gcc编译连接">
+<meta property="og:url" content="http://yoursite.com/2018/03/23/gcc编译链接/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在Windows的DOS下实现gcc编译和链接这里主要看的是两篇写的很详细的文章 C语言多文件编译初探（一） C语言多文件编译初探（二）  1.首先，你的Windows电脑的编译器需要是gcc,不清楚的话按win+r,输入cmd，打开DOS命令行界面。然后输入gcc -v,这个是用来查看你gcc版本的，如果提示不是内部或外部指令，则你的编译器不是gcc。反之，如果出现如下图片，则可以进行下一步了。">
+<meta property="og:image" content="http://yoursite.com/2018/03/23/gcc编译链接/gcc.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/23/gcc编译链接/dev.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/23/gcc编译链接/list.png">
+<meta property="og:updated_time" content="2018-03-24T13:15:20.192Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="gcc编译连接">
+<meta name="twitter:description" content="在Windows的DOS下实现gcc编译和链接这里主要看的是两篇写的很详细的文章 C语言多文件编译初探（一） C语言多文件编译初探（二）  1.首先，你的Windows电脑的编译器需要是gcc,不清楚的话按win+r,输入cmd，打开DOS命令行界面。然后输入gcc -v,这个是用来查看你gcc版本的，如果提示不是内部或外部指令，则你的编译器不是gcc。反之，如果出现如下图片，则可以进行下一步了。">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/23/gcc编译链接/gcc.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-gcc编译链接" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/23/gcc编译链接/" class="article-date">
+  <time datetime="2018-03-23T12:08:57.000Z" itemprop="datePublished">2018-03-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      gcc编译连接
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="在Windows的DOS下实现gcc编译和链接"><a href="#在Windows的DOS下实现gcc编译和链接" class="headerlink" title="在Windows的DOS下实现gcc编译和链接"></a>在Windows的DOS下实现gcc编译和链接</h2><p>这里主要看的是两篇写的很详细的文章</p>
+<p><a href="https://blog.csdn.net/candcplusplus/article/details/7317472" target="_blank" rel="noopener">C语言多文件编译初探（一）</a></p>
+<p><a href="https://blog.csdn.net/candcplusplus/article/details/53326368" target="_blank" rel="noopener">C语言多文件编译初探（二）</a></p>
+<hr>
+<p>1.首先，你的Windows电脑的编译器需要是gcc,不清楚的话按<code>win+r</code>,输入cmd，打开DOS命令行界面。然后输入<code>gcc -v</code>,这个是用来查看你gcc版本的，如果提示不是内部或外部指令，则你的编译器不是gcc。反之，如果出现如下图片，则可以进行下一步了。<br><img src="gcc.png" alt="图片"></p>
+<hr>
+<p>2.如果没有gcc，可以通过下载Dev-C++,使用其bin下的gcc.exe。在环境变量中配置Dev_C++下的bin。</p>
+<p><img src="dev.png" alt="Dev_C++"></p>
+<p>3.此时就可以在DOS中使用gcc了。gcc可以将c/c++文件编译为.o文件，然后链接生成可执行文件.exe。<br>4.接下来我们写两个源文件，一个头文件，用来模拟多文件编译过程。</p>
+<pre><code>//创建一个main.c文件
+#include&lt;stdio.h&gt;
+int main()
+{
+fun();
+return 0;
+}
+</code></pre><p>–</p>
+<pre><code>//创建一个fun.c文件,用来创建函数    
+#include&lt;stdio.h&gt;
+void fun()
+{
+int a=3,b=6;
+printf(&quot;%d+%d=%d&quot;,a,b,a+b);    
+}
+</code></pre><p>–</p>
+<pre><code>//创建一个fun.h文件，用来声明fun()这个函数
+//这个就很简单
+void fun();
+</code></pre><p>5.接下来就到关键时刻了，先生成.o文件，命令是<code>gcc -c fun.c main.c</code>,前面<code>-c</code>是指只执行编译这一步，如果没有，就会直接生成.exe<br>文件。这里是为了便于理解。执行完这一步，会发现源代码文件夹下有<code>fun.o和main.o</code>这两个文件，这就是目标文件，即二进制文件。下一步链接就需要这两个目标文件。</p>
+<p>6.链接命令是<code>gcc fun.o main.o</code>,这个默认生成的.exe文件是a.exe,如果觉得这样的名字不好，可以自己命名，只需要在后面加个-o name.exe即可。例如<code>gcc fun.o main.o -o mine.exe</code>,执行完后源代码目录下就会有.exe文件生产。最终所有文件如下：</p>
+<p><img src="list.png" alt=""></p>
+<ul>
+<li><strong>以上就是gcc编译链接多文件的流程</strong></li>
+</ul>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/23/gcc编译链接/" data-id="cjf5edidr0003u0tieoo0aiyj" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/20/车牌识别/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">车牌识别</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/第一次尝试/">第一次尝试</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/第一次尝试/" style="font-size: 10px;">第一次尝试</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/23/gcc编译链接/">gcc编译连接</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/20/车牌识别/">车牌识别</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/20/机器学习/">机器学习</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/18/Markdown-note/">Markdown_note</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/17/第一次尝试/">第一次尝试</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
