@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Aspire</title>
   
-  <subtitle>���֮��</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
   <link href="dog.jpg/"/>
-  <updated>2018-03-30T16:01:39.533Z</updated>
+  <updated>2018-03-27T04:56:05.905Z</updated>
   <id>dog.jpg/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>pass</title>
-    <link href="dog.jpg/2018/03/30/pass/"/>
-    <id>dog.jpg/2018/03/30/pass/</id>
-    <published>2018-03-30T15:51:49.000Z</published>
-    <updated>2018-03-30T16:01:39.533Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>看的到？<br> 、、<br>司机师傅</p><p> 精神可嘉快速健康健康的数据库</p><p>阿富汗何况非法吉娃娃<br>sAHib</p><p> SKAKWHQHF </p><p>SAUWERYYGWFEJASJ </p><p> SAIETFGFG金卡价数据库</p><p>暗示法或或或或</p><p>十分看好时间时间</p><p>圣诞节附加费</p><p>精神恍惚或多说多</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>Linux的诞生</title>
