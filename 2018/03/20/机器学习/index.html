@@ -16,15 +16,15 @@
 <meta property="og:site_name" content="Aspire">
 <meta property="og:description" content="一、ANN、SVM模型训练及使用的代码提示：以下基于opencv3 由于我没有接触过类似于Tensorflow的深度学习框架，所以下面了解的知识还比较片面。除TensorFlow外，深度学习的框架还有：Caffe、Keras、CNTK、Torch7、MXNet、Leaf、Theano、DeepLearning4、Lasagne、Neon，等等 关于用TensorFlow训练模型的文章  openc">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="dog.jpg/2018/03/20/机器学习/2.png">
-<meta property="og:image" content="dog.jpg/2018/03/20/机器学习/3.png">
-<meta property="og:image" content="dog.jpg/2018/03/20/机器学习/cpdw.png">
-<meta property="og:image" content="dog.jpg/2018/03/20/机器学习/cpsb.png">
-<meta property="og:updated_time" content="2018-03-24T14:19:57.767Z">
+<meta property="og:image" content="http://p6hlch5jf.bkt.clouddn.com/2.png">
+<meta property="og:image" content="http://p6hlch5jf.bkt.clouddn.com/3.png">
+<meta property="og:image" content="http://p6hlch5jf.bkt.clouddn.com/cpdw.png">
+<meta property="og:image" content="http://p6hlch5jf.bkt.clouddn.com/cpsb.png">
+<meta property="og:updated_time" content="2018-04-01T06:27:16.198Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习">
 <meta name="twitter:description" content="一、ANN、SVM模型训练及使用的代码提示：以下基于opencv3 由于我没有接触过类似于Tensorflow的深度学习框架，所以下面了解的知识还比较片面。除TensorFlow外，深度学习的框架还有：Caffe、Keras、CNTK、Torch7、MXNet、Leaf、Theano、DeepLearning4、Lasagne、Neon，等等 关于用TensorFlow训练模型的文章  openc">
-<meta name="twitter:image" content="dog.jpg/2018/03/20/机器学习/2.png">
+<meta name="twitter:image" content="http://p6hlch5jf.bkt.clouddn.com/2.png">
   
     <link rel="alternative" href="/atom.xml" title="Aspire" type="application/atom+xml">
   
@@ -212,7 +212,7 @@
 <p><strong>SVM模型调用</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">int smpW = 540;</span><br><span class="line">int smpH = 360;</span><br><span class="line"></span><br><span class="line">//创建并调用SVM模型</span><br><span class="line">Ptr&lt;SVM&gt; svm = SVM::load(&quot;SVM_data.xml&quot;);</span><br><span class="line">cout &lt;&lt; &quot;测试&quot; &lt;&lt; endl;</span><br><span class="line">for (int i = 0; i &lt; 2; i++)</span><br><span class="line">&#123;</span><br><span class="line">	for (int j = 5; j &lt; 6; j++)</span><br><span class="line">	&#123;</span><br><span class="line">	Mat testMat(1, smpW * smpH, CV_32FC1);</span><br><span class="line">	float * testData = testMat.ptr&lt;float&gt;(0);</span><br><span class="line">	string path = format(&quot;%d%d.png&quot;, i, j);</span><br><span class="line">	Mat img = imread(path, 0);</span><br><span class="line">	Canny(img, img, 50, 100);</span><br><span class="line"></span><br><span class="line">		for (int h = 0; h &lt; smpH; h++)</span><br><span class="line">		&#123;</span><br><span class="line">			uchar * imgData = img.ptr&lt;uchar&gt;(h);</span><br><span class="line">			for (int w = 0; w &lt; smpW; w++)</span><br><span class="line">			&#123;</span><br><span class="line">				int index2 = h*smpW + w;</span><br><span class="line">				testData[index2] = imgData[w] * 1.0;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	Mat ret(1, 1, CV_32S);</span><br><span class="line">	float response = svm-&gt;predict(testMat, ret); </span><br><span class="line">	 //进行预测，返回1或0</span><br><span class="line">	cout &lt;&lt; response &lt;&lt; endl;</span><br><span class="line">	float * data = ret.ptr&lt;float&gt;(0);</span><br><span class="line">	cout &lt;&lt; data[0] &lt;&lt; endl;</span><br><span class="line">	waitKey(10);</span><br></pre></td></tr></table></figure></p>
 <hr>
 <h1 id="二、神经网络训练及工作原理"><a href="#二、神经网络训练及工作原理" class="headerlink" title="二、神经网络训练及工作原理"></a>二、神经网络训练及工作原理</h1><hr>
-<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a><strong>1.原理</strong></h2><p><img src="2.png" alt="原理图"></p>
+<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a><strong>1.原理</strong></h2><p><img src="http://p6hlch5jf.bkt.clouddn.com/2.png" alt="原理图"></p>
 <ul>
 <li><a href="http://blog.csdn.net/app_12062011/article/details/54374893" target="_blank" rel="noopener">CNN原理解读</a></li>
 </ul>
@@ -233,7 +233,7 @@
 <li>后期调用</li>
 </ol>
 <h2 id="3-样本和标签的批量处理"><a href="#3-样本和标签的批量处理" class="headerlink" title="3.样本和标签的批量处理"></a><strong>3.样本和标签的批量处理</strong></h2><p>由于样本和标签很多，所以要将他们放在一个地方，读取时就可以实现自动批量处理，这里以csv文件为例。csv是逗号分隔值文件格式，是一种用来存储数据的纯文本文件。目标为数字识别，保存样式为：一行两个数据，第一个为数字图片的存储路径（即样本），第二个为标签（就是图片的数字，比如0,1,2···）具体展示如下。</p>
-<p><img src="3.png" alt="样本和标签的读取"></p>
+<p><img src="http://p6hlch5jf.bkt.clouddn.com/3.png" alt="样本和标签的读取"></p>
 <h2 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4.注意事项"></a><strong>4.注意事项</strong></h2><ul>
 <li><strong>ANN神经网络的输入层的端口数要等于样本的像素点，输出层端口数要等于label的个数</strong></li>
 <li><strong>理论上网络越深则表达能力越强，能处理的训练数据也更多，但训练算法未必支持</strong></li>
@@ -242,9 +242,9 @@
 <h2 id="三、车牌识别（HyperLPR）"><a href="#三、车牌识别（HyperLPR）" class="headerlink" title="三、车牌识别（HyperLPR）"></a>三、车牌识别（HyperLPR）</h2><ul>
 <li><strong>车牌识别中用到机器学习的有两个地方—–&gt;1. 车牌定位 2.车牌字符识别</strong></li>
 </ul>
-<p><strong>车牌定位</strong><br><img src="cpdw.png" alt="车牌定位"></p>
+<p><strong>车牌定位</strong><br><img src="http://p6hlch5jf.bkt.clouddn.com/cpdw.png" alt="车牌定位"></p>
 <hr>
-<p><strong>车牌字符识别</strong><br><img src="cpsb.png" alt="车牌字符识别"></p>
+<p><strong>车牌字符识别</strong><br><img src="http://p6hlch5jf.bkt.clouddn.com/cpsb.png" alt="车牌字符识别"></p>
 
       
 

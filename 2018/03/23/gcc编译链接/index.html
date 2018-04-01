@@ -16,14 +16,14 @@
 <meta property="og:site_name" content="Aspire">
 <meta property="og:description" content="在Windows的DOS下实现gcc编译和链接这里主要看的是两篇写的很详细的文章 C语言多文件编译初探（一） C语言多文件编译初探（二）  1.首先，你的Windows电脑的编译器需要是gcc,不清楚的话按win+r,输入cmd，打开DOS命令行界面。然后输入gcc -v,这个是用来查看你gcc版本的，如果提示不是内部或外部指令，则你的编译器不是gcc。反之，如果出现如下图片，则可以进行下一步了。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="dog.jpg/2018/03/23/gcc编译链接/gcc.png">
-<meta property="og:image" content="dog.jpg/2018/03/23/gcc编译链接/dev.png">
-<meta property="og:image" content="dog.jpg/2018/03/23/gcc编译链接/list.png">
-<meta property="og:updated_time" content="2018-03-24T14:18:21.974Z">
+<meta property="og:image" content="http://p6hlch5jf.bkt.clouddn.com/gcc.png">
+<meta property="og:image" content="http://p6hlch5jf.bkt.clouddn.com/dev.png">
+<meta property="og:image" content="http://p6hlch5jf.bkt.clouddn.com/list.png">
+<meta property="og:updated_time" content="2018-04-01T06:28:33.938Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gcc编译连接">
 <meta name="twitter:description" content="在Windows的DOS下实现gcc编译和链接这里主要看的是两篇写的很详细的文章 C语言多文件编译初探（一） C语言多文件编译初探（二）  1.首先，你的Windows电脑的编译器需要是gcc,不清楚的话按win+r,输入cmd，打开DOS命令行界面。然后输入gcc -v,这个是用来查看你gcc版本的，如果提示不是内部或外部指令，则你的编译器不是gcc。反之，如果出现如下图片，则可以进行下一步了。">
-<meta name="twitter:image" content="dog.jpg/2018/03/23/gcc编译链接/gcc.png">
+<meta name="twitter:image" content="http://p6hlch5jf.bkt.clouddn.com/gcc.png">
   
     <link rel="alternative" href="/atom.xml" title="Aspire" type="application/atom+xml">
   
@@ -189,10 +189,10 @@
 <p><a href="https://blog.csdn.net/candcplusplus/article/details/7317472" target="_blank" rel="noopener">C语言多文件编译初探（一）</a></p>
 <p><a href="https://blog.csdn.net/candcplusplus/article/details/53326368" target="_blank" rel="noopener">C语言多文件编译初探（二）</a></p>
 <hr>
-<p>1.首先，你的Windows电脑的编译器需要是gcc,不清楚的话按<code>win+r</code>,输入cmd，打开DOS命令行界面。然后输入<code>gcc -v</code>,这个是用来查看你gcc版本的，如果提示不是内部或外部指令，则你的编译器不是gcc。反之，如果出现如下图片，则可以进行下一步了。<br><img src="gcc.png" alt="图片"></p>
+<p>1.首先，你的Windows电脑的编译器需要是gcc,不清楚的话按<code>win+r</code>,输入cmd，打开DOS命令行界面。然后输入<code>gcc -v</code>,这个是用来查看你gcc版本的，如果提示不是内部或外部指令，则你的编译器不是gcc。反之，如果出现如下图片，则可以进行下一步了。<br><img src="http://p6hlch5jf.bkt.clouddn.com/gcc.png" alt="图片"></p>
 <hr>
 <p>2.如果没有gcc，可以通过下载Dev-C++,使用其bin下的gcc.exe。在环境变量中配置Dev_C++下的bin。</p>
-<p><img src="dev.png" alt="Dev_C++"></p>
+<p><img src="http://p6hlch5jf.bkt.clouddn.com/dev.png" alt="Dev_C++"></p>
 <p>3.此时就可以在DOS中使用gcc了。gcc可以将c/c++文件编译为.o文件，然后链接生成可执行文件.exe。<br>4.接下来我们写两个源文件，一个头文件，用来模拟多文件编译过程。</p>
 <pre><code>//创建一个main.c文件
 #include&lt;stdio.h&gt;
@@ -215,7 +215,7 @@ printf(&quot;%d+%d=%d&quot;,a,b,a+b);
 void fun();
 </code></pre><p>5.接下来就到关键时刻了，先生成.o文件，命令是<code>gcc -c fun.c main.c</code>,前面<code>-c</code>是指只执行编译这一步，如果没有，就会直接生成.exe<br>文件。这里是为了便于理解。执行完这一步，会发现源代码文件夹下有<code>fun.o和main.o</code>这两个文件，这就是目标文件，即二进制文件。下一步链接就需要这两个目标文件。</p>
 <p>6.链接命令是<code>gcc fun.o main.o</code>,这个默认生成的.exe文件是a.exe,如果觉得这样的名字不好，可以自己命名，只需要在后面加个-o name.exe即可。例如<code>gcc fun.o main.o -o mine.exe</code>,执行完后源代码目录下就会有.exe文件生产。最终所有文件如下：</p>
-<p><img src="list.png" alt=""></p>
+<p><img src="http://p6hlch5jf.bkt.clouddn.com/list.png" alt=""></p>
 <ul>
 <li><strong>以上就是gcc编译链接多文件的流程</strong></li>
 </ul>

@@ -180,7 +180,7 @@
       
         <h1 id="一、车牌定位代码"><a href="#一、车牌定位代码" class="headerlink" title="一、车牌定位代码"></a>一、车牌定位代码</h1><hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include &quot;opencv2\opencv.hpp&quot;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;	</span><br><span class="line">using namespace cv;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	//定义，类似define</span><br><span class="line">	string xmlPath = &quot;cascade.xml&quot;;</span><br><span class="line">	//创建分类器对象</span><br><span class="line">	CascadeClassifier ccf;   </span><br><span class="line">	Mat img = imread(&quot;1.jpg&quot;);</span><br><span class="line">	//加载训练文件</span><br><span class="line">	if (!ccf.load(xmlPath))   </span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; &quot;不能加载指定的xml文件&quot; &lt;&lt; endl;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	//创建一个容器保存检测出来的车牌</span><br><span class="line">	vector&lt;Rect&gt; faces;  </span><br><span class="line">	Mat gray;</span><br><span class="line">	//转换成灰度图，因为harr特征从灰度图中提取</span><br><span class="line">	cvtColor(img, gray, CV_BGR2GRAY); </span><br><span class="line">	 //直方图均衡行</span><br><span class="line">	equalizeHist(gray, gray); </span><br><span class="line">	//检测车牌</span><br><span class="line">	ccf.detectMultiScale(gray, faces, 1.1, 3, 0, Size(1, 10), Size(1000, 1000)); </span><br><span class="line">	imshow(&quot;chepai&quot;, faces);</span><br><span class="line">	for (vector&lt;Rect&gt;::const_iterator iter = faces.begin();iter != faces.end	();iter++)</span><br><span class="line">	&#123;</span><br><span class="line">		//画出车牌矩形</span><br><span class="line">		rectangle(img, *iter, Scalar(0, 0, 255), 2, 8);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//imshow(&quot;rect&quot;, Rect);</span><br><span class="line">	//resize(img, img, Size(1018, 550));</span><br><span class="line">	imshow(&quot;plate&quot;, img);</span><br><span class="line">	waitKey(0);</span><br><span class="line">	return 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>结果如图</strong><br><img src="cpdw1.png" alt="c车牌定位"></p>
+<p><strong>结果如图</strong><br><img src="http://p6hlch5jf.bkt.clouddn.com/cpdw1.png" alt="c车牌定位"></p>
 <hr>
 <h1 id="二、车牌字符识别"><a href="#二、车牌字符识别" class="headerlink" title="二、车牌字符识别"></a>二、车牌字符识别</h1><hr>
 <ul>
@@ -292,7 +292,7 @@
 <p><strong>SVM模型调用</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">int smpW = 540;</span><br><span class="line">int smpH = 360;</span><br><span class="line"></span><br><span class="line">//创建并调用SVM模型</span><br><span class="line">Ptr&lt;SVM&gt; svm = SVM::load(&quot;SVM_data.xml&quot;);</span><br><span class="line">cout &lt;&lt; &quot;测试&quot; &lt;&lt; endl;</span><br><span class="line">for (int i = 0; i &lt; 2; i++)</span><br><span class="line">&#123;</span><br><span class="line">	for (int j = 5; j &lt; 6; j++)</span><br><span class="line">	&#123;</span><br><span class="line">	Mat testMat(1, smpW * smpH, CV_32FC1);</span><br><span class="line">	float * testData = testMat.ptr&lt;float&gt;(0);</span><br><span class="line">	string path = format(&quot;%d%d.png&quot;, i, j);</span><br><span class="line">	Mat img = imread(path, 0);</span><br><span class="line">	Canny(img, img, 50, 100);</span><br><span class="line"></span><br><span class="line">		for (int h = 0; h &lt; smpH; h++)</span><br><span class="line">		&#123;</span><br><span class="line">			uchar * imgData = img.ptr&lt;uchar&gt;(h);</span><br><span class="line">			for (int w = 0; w &lt; smpW; w++)</span><br><span class="line">			&#123;</span><br><span class="line">				int index2 = h*smpW + w;</span><br><span class="line">				testData[index2] = imgData[w] * 1.0;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	Mat ret(1, 1, CV_32S);</span><br><span class="line">	float response = svm-&gt;predict(testMat, ret); </span><br><span class="line">	 //进行预测，返回1或0</span><br><span class="line">	cout &lt;&lt; response &lt;&lt; endl;</span><br><span class="line">	float * data = ret.ptr&lt;float&gt;(0);</span><br><span class="line">	cout &lt;&lt; data[0] &lt;&lt; endl;</span><br><span class="line">	waitKey(10);</span><br></pre></td></tr></table></figure></p>
 <hr>
 <h1 id="二、神经网络训练及工作原理"><a href="#二、神经网络训练及工作原理" class="headerlink" title="二、神经网络训练及工作原理"></a>二、神经网络训练及工作原理</h1><hr>
-<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a><strong>1.原理</strong></h2><p><img src="2.png" alt="原理图"></p>
+<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a><strong>1.原理</strong></h2><p><img src="http://p6hlch5jf.bkt.clouddn.com/2.png" alt="原理图"></p>
 <ul>
 <li><a href="http://blog.csdn.net/app_12062011/article/details/54374893" target="_blank" rel="noopener">CNN原理解读</a></li>
 </ul>
@@ -313,7 +313,7 @@
 <li>后期调用</li>
 </ol>
 <h2 id="3-样本和标签的批量处理"><a href="#3-样本和标签的批量处理" class="headerlink" title="3.样本和标签的批量处理"></a><strong>3.样本和标签的批量处理</strong></h2><p>由于样本和标签很多，所以要将他们放在一个地方，读取时就可以实现自动批量处理，这里以csv文件为例。csv是逗号分隔值文件格式，是一种用来存储数据的纯文本文件。目标为数字识别，保存样式为：一行两个数据，第一个为数字图片的存储路径（即样本），第二个为标签（就是图片的数字，比如0,1,2···）具体展示如下。</p>
-<p><img src="3.png" alt="样本和标签的读取"></p>
+<p><img src="http://p6hlch5jf.bkt.clouddn.com/3.png" alt="样本和标签的读取"></p>
 <h2 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4.注意事项"></a><strong>4.注意事项</strong></h2><ul>
 <li><strong>ANN神经网络的输入层的端口数要等于样本的像素点，输出层端口数要等于label的个数</strong></li>
 <li><strong>理论上网络越深则表达能力越强，能处理的训练数据也更多，但训练算法未必支持</strong></li>
@@ -322,9 +322,9 @@
 <h2 id="三、车牌识别（HyperLPR）"><a href="#三、车牌识别（HyperLPR）" class="headerlink" title="三、车牌识别（HyperLPR）"></a>三、车牌识别（HyperLPR）</h2><ul>
 <li><strong>车牌识别中用到机器学习的有两个地方—–&gt;1. 车牌定位 2.车牌字符识别</strong></li>
 </ul>
-<p><strong>车牌定位</strong><br><img src="cpdw.png" alt="车牌定位"></p>
+<p><strong>车牌定位</strong><br><img src="http://p6hlch5jf.bkt.clouddn.com/cpdw.png" alt="车牌定位"></p>
 <hr>
-<p><strong>车牌字符识别</strong><br><img src="cpsb.png" alt="车牌字符识别"></p>
+<p><strong>车牌字符识别</strong><br><img src="http://p6hlch5jf.bkt.clouddn.com/cpsb.png" alt="车牌字符识别"></p>
 
       
 
@@ -543,7 +543,7 @@
 <p>3.最后在网上看到一篇博客—&gt;<br><a href="http:////blog.csdn.net/gdutxiaoxu/article/details/53576018" title="手把手教你搭建博客" target="_blank" rel="noopener">http:////blog.csdn.net/gdutxiaoxu/article/details/53576018</a><br>4.他直接使用Windows的DOS,具体操作很详细，过程也能看懂。</p>
 <p>博客的发布也很简单：<code>hexo d -g</code> <em>生成及部署</em></p>
 <p>此处载入一张图片，以表心情</p>
-<p><img src="grass.jpg" alt="Happy"></p>
+<p><img src="http://p6hlch5jf.bkt.clouddn.com/grass.jpg" alt="Happy"></p>
 <p>5.希望自己稍后能学会在Linux上搭建博客。</p>
 <p>##</p>
 
