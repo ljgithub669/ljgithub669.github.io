@@ -74,7 +74,7 @@
     <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/03/25/pictures/"/>
     <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/03/25/pictures/</id>
     <published>2018-03-25T08:57:56.000Z</published>
-    <updated>2018-04-02T15:36:00.750Z</updated>
+    <updated>2018-04-03T05:21:44.468Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://p6hlch5jf.bkt.clouddn.com/library.jpg" alt=""><br>2018年3月26日，连续雨天后的放晴</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/wall2.jpg" alt=""><br>2018年3月10日，西安城墙一游</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/winter.jpg" alt=""><br>2018年1月8日，学校中心，冬景</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/tree3.jpg" alt=""><br>2017年10月，秦岭下，古观音禅寺，去的有些晚，银杏叶大部分都落了，不过还是很美</p><a id="more"></a><p><img src="http://p6hlch5jf.bkt.clouddn.com/instruction.jpg" alt=""><br>古寺的历史，还是挺久远的</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/road.jpg" alt=""><br>空气清新，内心平静</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/tree2.jpg" alt=""><br>天气很好，心情很好</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/maidenhair.jpg" alt=""><br>2019年9月14日，和同学一起绕学校转了一圈，真的挺大，这是在学校南边的家属区拍的，很净、很静</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/tower.jpg" alt=""><br>2017年9月17日，观光塔+情人坑</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/tree.jpg" alt=""><br>2017年9月踏进校园</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/flower.jpg" alt=""><br>2017年8月27日，夏天，家附近的一处山坡</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/bridge.jpg" alt=""><br>2017年8月10日，家乡的河—洛河</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/sky.jpg" alt=""><br>充满想象</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/dog2.jpg" alt=""><br>2017年7月29日，很傻，但很可爱（=_=）</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/square.jpg" alt=""><br>烈夏，暖风，白云，绿水，商洛</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/shangluo.jpg" alt=""><br>2017年7月24日，商洛，丹江河畔</p>]]></content>
     
@@ -88,7 +88,7 @@
     </summary>
     
     
-      <category term="相册，随笔" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E7%9B%B8%E5%86%8C%EF%BC%8C%E9%9A%8F%E7%AC%94/"/>
+      <category term="photo，随笔" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/photo%EF%BC%8C%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
@@ -227,7 +227,7 @@
     <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/03/16/Hello-World/"/>
     <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/03/16/Hello-World/</id>
     <published>2018-03-16T11:32:59.000Z</published>
-    <updated>2018-03-25T08:51:16.756Z</updated>
+    <updated>2018-04-03T05:20:55.698Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
