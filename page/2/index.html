@@ -196,8 +196,7 @@ src=&quot;http://player.youku.com/embed/XNjcyMDU4Njg0&quot;
 frameborder=0 allowfullscreen&gt;  
 &lt;/iframe&gt; 
 </code></pre>
-     
-
+      
 
       
     </div>
@@ -261,7 +260,6 @@ frameborder=0 allowfullscreen&gt;
         <h2 id="在Windows的DOS下实现gcc编译和链接"><a href="#在Windows的DOS下实现gcc编译和链接" class="headerlink" title="在Windows的DOS下实现gcc编译和链接"></a>在Windows的DOS下实现gcc编译和链接</h2><p>这里主要看的是两篇写的很详细的文章</p>
         
       
-
 
       
     </div>
@@ -337,7 +335,6 @@ frameborder=0 allowfullscreen&gt;
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include &quot;opencv2\opencv.hpp&quot;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;	</span><br><span class="line">using namespace cv;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	//定义，类似define</span><br><span class="line">	string xmlPath = &quot;cascade.xml&quot;;</span><br><span class="line">	//创建分类器对象</span><br><span class="line">	CascadeClassifier ccf;   </span><br><span class="line">	Mat img = imread(&quot;1.jpg&quot;);</span><br><span class="line">	//加载训练文件</span><br><span class="line">	if (!ccf.load(xmlPath))   </span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; &quot;不能加载指定的xml文件&quot; &lt;&lt; endl;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	//创建一个容器保存检测出来的车牌</span><br><span class="line">	vector&lt;Rect&gt; faces;  </span><br><span class="line">	Mat gray;</span><br><span class="line">	//转换成灰度图，因为harr特征从灰度图中提取</span><br><span class="line">	cvtColor(img, gray, CV_BGR2GRAY); </span><br><span class="line">	 //直方图均衡行</span><br><span class="line">	equalizeHist(gray, gray); </span><br><span class="line">	//检测车牌</span><br><span class="line">	ccf.detectMultiScale(gray, faces, 1.1, 3, 0, Size(1, 10), Size(1000, 1000)); </span><br><span class="line">	imshow(&quot;chepai&quot;, faces);</span><br><span class="line">	for (vector&lt;Rect&gt;::const_iterator iter = faces.begin();iter != faces.end	();iter++)</span><br><span class="line">	&#123;</span><br><span class="line">		//画出车牌矩形</span><br><span class="line">		rectangle(img, *iter, Scalar(0, 0, 255), 2, 8);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//imshow(&quot;rect&quot;, Rect);</span><br><span class="line">	//resize(img, img, Size(1018, 550));</span><br><span class="line">	imshow(&quot;plate&quot;, img);</span><br><span class="line">	waitKey(0);</span><br><span class="line">	return 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
       
-
 
       
     </div>
@@ -415,7 +412,6 @@ frameborder=0 allowfullscreen&gt;
         
       
 
-
       
     </div>
     <div class="article-info article-info-index">
@@ -491,7 +487,6 @@ frameborder=0 allowfullscreen&gt;
 <hr>
         
       
-
 
       
     </div>
@@ -661,15 +656,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">旧事</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -742,6 +737,18 @@ MathJax.Hub.Queue(function() {
           
             <li class="search-li">
               <a href="http://lucida.me/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>lucida</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://blog.sina.com.cn/chjguancha" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>柴静</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://blog.sina.com.cn/twocold" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>韩寒</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>王亨</a>
             </li>
           
         </ul>
