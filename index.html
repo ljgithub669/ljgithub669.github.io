@@ -178,7 +178,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="一、C-C-的自定义头文件引用"><a href="#一、C-C-的自定义头文件引用" class="headerlink" title="一、C/C++的自定义头文件引用"></a>一、C/C++的自定义头文件引用</h1><ul>
+<li>为什么要写这篇文章呢？</li>
+</ul>
+<blockquote>
+<p>当我们用C/C++写程序时，头文件引用每次都会用到<code>#include &lt;stdio.h&gt;</code>或<code>#include &lt;iostream&gt;</code>，并且这个头文件还放在编译软件内部，需要自己去找，一般放在include包含头文件的地方。</p>
+</blockquote>
+<p>这里简单进行举例，比如vc6.0中上面两个头文件的位置<br><img src="http://p6hlch5jf.bkt.clouddn.com/vc_stdio.h.png" alt="stdio.h"></p>
+<p>都在include文件下<br><img src="http://p6hlch5jf.bkt.clouddn.com/vc_iostream.png" alt=""></p>
+<p>而Dev_C++的不在一起</p>
+<p><img src="http://p6hlch5jf.bkt.clouddn.com/dev_stdio.h.png" alt="stdio.h"></p>
+<p><img src="http://p6hlch5jf.bkt.clouddn.com/dev_iostream.png" alt="iostream"></p>
+<p>以下以Dev_C++为例，因为它的编译器是gcc和g++，使用较为方便</p>
+<p><img src="http://p6hlch5jf.bkt.clouddn.com/stdio_code.png" alt="这是头文件的代码，挺多的"><br><code>这是头文件的代码，挺多的</code></p>
+<p><strong>好了，现在开始进入正题：</strong></p>
+<ol>
+<li>一般一个功能模块都是用<code>name.h</code>和<code>name.c</code>两个文件来完成的，.h文件中写函数声明和定义，.c文件中写函数的主体。调用时只需要include头文件即可。自定义头文件的话，我们可以把函数主体和定义声明写在同一个.h文件里。（开始我也好奇既然可以写在一个文件里，那为什么要分开写呢？原来当一个工程项目很大是，出现错误时可以更精准的定位，便于维护）。</li>
+<li><p>首先我们写一个头文件<code>fun.h</code></p>
+<p> #include &lt;stdio.h&gt;</p>
+<p> int fun();    //进行函数声明<br> int fun()     //函数主体.<br> {</p>
+<pre><code>printf(&quot;Your first head file.\n&quot;);
+printf(&quot;Bye!&quot;);
+</code></pre><p> }</p>
+</li>
+<li><p>然后再写个主函数main.c</p>
+<p> #include &lt;stdio.h&gt;<br> #include “fun.h”<br> int main()<br> {</p>
+<pre><code>fun();     //调用定义的函数
+printf(&quot;Just do it!\n&quot;);
+return 0;
+</code></pre><p> }</p>
+</li>
+<li><p>我们把这个<code>fun.h</code>放在和<code>stdio.h</code>相同的路径下，不就可以随时在机器上使用这个头文件了吗。<br>将代码粘贴到include路径下，如下：</p>
+</li>
+</ol>
+<p><img src="http://p6hlch5jf.bkt.clouddn.com/fun.h.png" alt=""></p>
+<p>然后在DOS下cd进入main.c所在文件夹，gcc进行编译（这里提示一下，gcc编译经常会出现报错，解决方法是在最后一行加上空格，其实就是报错的原因，仔细看能看懂）</p>
+<p><img src="http://p6hlch5jf.bkt.clouddn.com/gcc_zidingyi_.h_.png" alt=""></p>
+<p>运行a.exe</p>
+<p><img src="http://p6hlch5jf.bkt.clouddn.com/gcc_run_.h_.png" alt=""></p>
+<ul>
+<li><strong>后期可以随便发挥</strong></li>
+</ul>
+
       
 
       
@@ -186,6 +227,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
