@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/"/>
-  <updated>2018-04-20T16:34:48.498Z</updated>
+  <updated>2018-04-22T15:51:12.941Z</updated>
   <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>make命令用法</title>
+    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/22/make%E5%91%BD%E4%BB%A4%E7%94%A8%E6%B3%95/"/>
+    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/22/make命令用法/</id>
+    <published>2018-04-22T15:50:50.000Z</published>
+    <updated>2018-04-22T15:51:12.941Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ol><li>使用make命令需要条件：同一个文件夹下多个.c文件和一个makefile文件，如图：<br><img src="http://p6hlch5jf.bkt.clouddn.com/make_list.png" alt=""></li><li>各个文件内容如下图：<br><img src="http://p6hlch5jf.bkt.clouddn.com/make_file.png" alt=""></li><li><p>主要是makefile的内容</p><p> name ： file1.o filee2.o</p><pre><code>gcc -o name file1.o file2.o</code></pre></li></ol><p>其中name自己可以随便取。</p><ol><li>具体执行过程：直接敲<code>make</code>即可，如图<br><img src="http://p6hlch5jf.bkt.clouddn.com/make_make.png" alt=""></li><li>然后文件夹下会生成一个名为main的可执行文件，敲<code>./main</code>即可运行，如图<br><img src="http://p6hlch5jf.bkt.clouddn.com/make_run.png" alt=""></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>Vim</title>
