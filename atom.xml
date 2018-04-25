@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/"/>
-  <updated>2018-04-22T15:57:02.306Z</updated>
+  <updated>2018-04-25T10:56:19.325Z</updated>
   <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/</id>
   
   <author>
@@ -17,17 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>静态库、动态库</title>
+    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/25/%E9%9D%99%E6%80%81%E5%BA%93%E3%80%81%E5%8A%A8%E6%80%81%E5%BA%93/"/>
+    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/25/静态库、动态库/</id>
+    <published>2018-04-25T10:53:35.000Z</published>
+    <updated>2018-04-25T10:56:19.325Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="1-静态链接库的生成"><a href="#1-静态链接库的生成" class="headerlink" title="1.静态链接库的生成"></a>1.静态链接库的生成</h1><p><a href="http://www.cnblogs.com/jiqingwu/p/4325382.html" target="_blank" rel="noopener">参考的文章</a></p><p>1.先生成目标文件，然后打包成静态库<br><code>gcc -c test1.c test2.c</code></p><a id="more"></a><p>2.静态库文件名称，以lib开头，以.a结尾，例如<code>libtest.a</code>。通过ar生成，<code>ar crv libtest.a test1.o test2.o</code>，要查看静态库包含的目标文件，可以使用<code>ar t libtest.a</code>查看。</p><p>3.接下来是生成可执行文件，<code>gcc test.c -L. -ltest -o test</code></p><p>过程如图：</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/link_jingtai.png" alt=""></p><h1 id="2-动态链接库的生成"><a href="#2-动态链接库的生成" class="headerlink" title="2.动态链接库的生成"></a>2.动态链接库的生成</h1><p><img src="http://p6hlch5jf.bkt.clouddn.com/link.png" alt="原理图"></p><p>1.动态库文件名必须以lib开头，以.so结尾，例如<code>libtest.so</code>。</p><p>2.首先，需要的文件如下，而且gcc都可以编译</p><p>3.生成动态链接库（此时是除主函数main外，其他所有函数打包的集合，即.o文件的集合，链接时可以通过和主函数链接产生可执行文件，可重复利用），只需要一步，<code>gcc test1.c test2.c -fPIC -shared -o libtest.so</code>，如图：</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/link_link.png" alt=""></p><p>可见已经产生libtest.so这个动态链接库<br>4.和主函数进行链接，也只有一步<code>gcc test.c -L. -ltest -o test</code>，生成的test即可执行文件</p><p>5.最后是运行，这一步要指定动态链接库的位置，需要用到<code>LD_LIBRARY_PATH=. ./test</code><br>,这样就可以执行了。<br><img src="http://p6hlch5jf.bkt.clouddn.com/link_run.png" alt=""></p><h1 id="3-g-gcc-编译选项"><a href="#3-g-gcc-编译选项" class="headerlink" title="3.g++(gcc)编译选项"></a>3.g++(gcc)编译选项</h1><p> -shared ：指定生成动态链接库。</p><p>  -static ：指定生成静态链接库。</p><p>  -fPIC ：表示编译为位置独立的代码，用于编译共享库。目标文件需要创建成位置无关码， 念上就是在可执行程序装载它们的时候，它们可以放在可执行程序的内存里的任何地方。</p><p>  -L. ：表示要连接的库所在的目录。</p><p>  -l：指定链接时需要的动态库。编译器查找动态连接库时有隐含的命名规则，即在给出的名字前面加上lib，后面加上.a/.so来确定库的名称。</p><p>  -Wall ：生成所有警告信息。</p><p>  -ggdb ：此选项将尽可能的生成gdb 的可以使用的调试信息。</p><p>  -g ：编译器在编译的时候产生调试信息。</p><p>  -c ：只激活预处理、编译和汇编,也就是把程序做成目标文件(.o文件) 。</p><p>  -Wl,options ：把参数(options)传递给链接器ld 。如果options 中间有逗号,就将options分成多个选项,然后传递给链接程序。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1-静态链接库的生成&quot;&gt;&lt;a href=&quot;#1-静态链接库的生成&quot; class=&quot;headerlink&quot; title=&quot;1.静态链接库的生成&quot;&gt;&lt;/a&gt;1.静态链接库的生成&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/jiqingwu/p/4325382.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;参考的文章&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1.先生成目标文件，然后打包成静态库&lt;br&gt;&lt;code&gt;gcc -c test1.c test2.c&lt;/code&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>make命令用法</title>
     <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/22/make%E5%91%BD%E4%BB%A4%E7%94%A8%E6%B3%95/"/>
     <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/22/make命令用法/</id>
     <published>2018-04-22T15:50:50.000Z</published>
-    <updated>2018-04-22T15:57:02.306Z</updated>
+    <updated>2018-04-25T11:05:34.858Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1.使用make命令需要条件：同一个文件夹下多个.c文件和一个makefile文件，如图：<br><img src="http://p6hlch5jf.bkt.clouddn.com/make_list.png" alt=""><br><a id="more"></a></p><p>2.各个文件内容如下图：<br><img src="http://p6hlch5jf.bkt.clouddn.com/make_file.png" alt=""><br>3.主要是makefile的内容</p><pre><code>name ： file1.o filee2.o    gcc -o name file1.o file2.o</code></pre><p>其中name自己可以随便取。</p><p>4.具体执行过程：直接敲<code>make</code>即可，如图<br><img src="http://p6hlch5jf.bkt.clouddn.com/make_make.png" alt=""><br>5.然后文件夹下会生成一个名为main的可执行文件，敲<code>./main</code>即可运行，如图<br><img src="http://p6hlch5jf.bkt.clouddn.com/make_run.png" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1.使用make命令需要条件：同一个文件夹下多个.c文件和一个makefile文件，如图：<br><img src="http://p6hlch5jf.bkt.clouddn.com/make_list1.png" alt=""><br><a id="more"></a></p><p>2.各个文件内容如下图：<br><img src="http://p6hlch5jf.bkt.clouddn.com/make_file.png" alt=""></p><p>3.主要是makefile的内容</p><pre><code>name ： file1.o filee2.o    gcc -o name file1.o file2.o</code></pre><p>其中name自己可以随便取。</p><p>4.具体执行过程：直接敲<code>make</code>即可，如图<br><img src="http://p6hlch5jf.bkt.clouddn.com/make_make1.png" alt=""></p><p>5.然后文件夹下会生成一个名为main的可执行文件，敲<code>./main</code>即可运行，如图<br><img src="http://p6hlch5jf.bkt.clouddn.com/make_run1.png" alt=""></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;1.使用make命令需要条件：同一个文件夹下多个.c文件和一个makefile文件，如图：&lt;br&gt;&lt;img src=&quot;http://p6hlch5jf.bkt.clouddn.com/make_list.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+      &lt;p&gt;1.使用make命令需要条件：同一个文件夹下多个.c文件和一个makefile文件，如图：&lt;br&gt;&lt;img src=&quot;http://p6hlch5jf.bkt.clouddn.com/make_list1.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
     
     </summary>
     
@@ -359,14 +380,13 @@
     <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/03/17/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%B0%9D%E8%AF%95/"/>
     <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/03/17/第一次尝试/</id>
     <published>2018-03-16T16:25:59.000Z</published>
-    <updated>2018-04-05T04:43:14.792Z</updated>
+    <updated>2018-04-25T11:07:28.074Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>#<strong>很高兴，今天可以自己搭建博客了</strong></p><p>##<br><a id="more"></a><br>1.之前尝试过搭建，都因为工具的原因一直出错。</p><p>2.今天下午在ubuntu上尝试，但hexo无法正常下载。然后又用Windows的Git搭建，出现的问题更多。</p><p>3.最后在网上看到一篇博客—&gt;<br><a href="http:////blog.csdn.net/gdutxiaoxu/article/details/53576018" title="手把手教你搭建博客" target="_blank" rel="noopener">http:////blog.csdn.net/gdutxiaoxu/article/details/53576018</a><br>4.他直接使用Windows的DOS,具体操作很详细，过程也能看懂。</p><p>博客的发布也很简单：<code>hexo d -g</code> <em>生成及部署</em></p><p>此处载入一张图片，以表心情</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/grass.jpg" alt="Happy"></p><p>5.希望自己稍后能学会在Linux上搭建博客。</p><p>##</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="很高兴，今天可以自己搭建博客了"><a href="#很高兴，今天可以自己搭建博客了" class="headerlink" title="很高兴，今天可以自己搭建博客了"></a><strong>很高兴，今天可以自己搭建博客了</strong></h1><a id="more"></a><p>1.之前尝试过搭建，都因为工具的原因一直出错。</p><p>2.今天下午在ubuntu上尝试，但hexo无法正常下载。然后又用Windows的Git搭建，出现的问题更多。</p><p>3.最后在网上看到一篇博客—&gt;<br><a href="http:////blog.csdn.net/gdutxiaoxu/article/details/53576018" title="手把手教你搭建博客" target="_blank" rel="noopener">http:////blog.csdn.net/gdutxiaoxu/article/details/53576018</a><br>4.他直接使用Windows的DOS,具体操作很详细，过程也能看懂。</p><p>博客的发布也很简单：<code>hexo d -g</code> <em>生成及部署</em></p><p>此处载入一张图片，以表心情</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/grass.jpg" alt="Happy"></p><p>5.希望自己稍后能学会在Linux上搭建博客。</p><hr>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;#&lt;strong&gt;很高兴，今天可以自己搭建博客了&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;##&lt;br&gt;
+      &lt;h1 id=&quot;很高兴，今天可以自己搭建博客了&quot;&gt;&lt;a href=&quot;#很高兴，今天可以自己搭建博客了&quot; class=&quot;headerlink&quot; title=&quot;很高兴，今天可以自己搭建博客了&quot;&gt;&lt;/a&gt;&lt;strong&gt;很高兴，今天可以自己搭建博客了&lt;/strong&gt;&lt;/h1&gt;
     
     </summary>
     
