@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/"/>
-  <updated>2018-05-06T10:06:02.363Z</updated>
+  <updated>2018-05-17T10:48:18.501Z</updated>
   <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git的使用</title>
+    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/05/17/git%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/05/17/git的使用/</id>
+    <published>2018-05-17T10:43:13.000Z</published>
+    <updated>2018-05-17T10:48:18.501Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一、内容简介"><a href="#一、内容简介" class="headerlink" title="一、内容简介"></a>一、内容简介</h1><p><img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" alt=""><br><a id="more"></a></p><ol><li>在github上申请一个账号，包括<strong>用户名</strong>和<strong>邮箱</strong>，这是我们信息存储的最主要标识，一定要记住，后面会多次用到。</li><li>我们申请的账号下，可以建立很多仓库，用来存放我们的文件。<code>git</code>的方便之处就在于可以轻松在不同仓库之间切换。</li><li>本地电脑连接远程仓库（也就是网上的代码），需要通过ssh登录来实现，原理就是在本地电脑上输入<code>ssh-keygen -t rsa -C &quot;642746796@qq.com&quot;</code>（引号之内填你的邮箱），然后会生成一串公钥密文，在<code>~/ssh/</code>文件夹下，默认有<code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件，打开后者，复制全部内容，然后去github官网上打开你的账户，把公钥粘贴进去。这样，本地电脑和远程仓库就形成了一一对应关系，本地上修改内容后，就可以通过<code>git push</code>来更新远程仓库，从而更新。</li></ol><h1 id="二、实际操作"><a href="#二、实际操作" class="headerlink" title="二、实际操作"></a>二、实际操作</h1><ol><li>打开<code>git bash</code>，输入git账号信息，分别是<code>git config --global user.name &quot;ljgithub669&quot;</code>和<code>git config --global user.email &quot;642746796@qq.com&quot;</code>。然后输入<code>git config user.name</code>和<code>git config user.email</code>可以查看当前本地账户信息，也就是你刚才配置的信息。</li><li>用<code>ssh -T git@github.com</code>测试连接情况。</li></ol><p>这是我的电脑显示的情况，如果不一样，出现其他情况则输入yes<br><img src="http://p6hlch5jf.bkt.clouddn.com/git_connect.png" alt=""></p><ol><li>接下来就很简单，只需要三步</li></ol><ul><li><p>git add .</p></li><li><p>git commit -m “描述”</p></li><li><p>git push</p></li></ul><p>以上三步都是在<code>git clone</code>的文件夹下进行的。其中<code>git add</code>也可以指定添加文件，例如<code>git add newfile</code>。</p><p>可以通过<code>git status</code>和<code>git log</code>来查看代码更改情况</p><h1 id="三、踩过的坑"><a href="#三、踩过的坑" class="headerlink" title="三、踩过的坑"></a>三、踩过的坑</h1><p>1.之前第一次尝试没有问题，很顺利。之后又申请了一个github账号，然后准备用两个账号熟悉一下git的使用，主要是学习git request的使用，然后就悲哀了，两个账号在切换的时候就出现了问题，显示一个账号禁止另一个账号进行<code>push</code>。</p><p>很久了，不知道怎么解决，直到看到一篇文章，还有<strong>凭据</strong>这个东西，需要注销第一个账号才能登陆第二个。我的电脑（win10）中的位置是：<strong>控制面板—&gt;用户账户—&gt;凭据管理器</strong>,在下面删除第一个github账号就可以顺利登陆第二个了。</p><p>这里有图<br><img src="http://p6hlch5jf.bkt.clouddn.com/git_ping_ju.png" alt=""></p><p>2.之前不知道，一个git账号下可以有很多仓库，每个仓库独立，更改时只需要将其<code>git clone</code>到本地即可，然后本地更改后push就可以了。</p><hr><ul><li>相关链接<a href="https://cnbin.github.io/blog/2015/05/30/git-ming-ling-da-quan/" target="_blank" rel="noopener">git常用命令</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、内容简介&quot;&gt;&lt;a href=&quot;#一、内容简介&quot; class=&quot;headerlink&quot; title=&quot;一、内容简介&quot;&gt;&lt;/a&gt;一、内容简介&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://assets-cdn.github.com/images/modules/logos_page/Octocat.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>音乐墙</title>
