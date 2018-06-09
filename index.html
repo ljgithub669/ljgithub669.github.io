@@ -152,6 +152,236 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-校园网开IPV6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/09/校园网开IPV6/">校园网开IPV6</a>
+    </h1>
+  
+
+        
+        <a href="/2018/06/09/校园网开IPV6/" class="archive-article-date">
+  	<time datetime="2018-06-09T14:40:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.把校园网的网线插到电脑上（就是桌子后面的插口），打开设置—&gt;拨号—&gt;宽带连接—&gt;连接到Internet，然后输入校园网账号（学号）和密码。</p>
+<p>2.接下来是更改一下设置，将网络改成走只IPV6，很简单。然后打开更改网络配置，点击宽带，右键属性，选择网络，点击下面的属性，在下面的DNS里面输入<code>2001:4860:4860::8888</code>和<code>2001:4860:4860::8844</code>。</p>
+<p>3.最后主要是替换原来的hosts文件，不知道没有关系，它在<code>C:\Windows\System32\drivers\etc</code>下。在<a href="">这里</a>下载文件，然后替换原来的。</p>
+<p>4.最后按<code>win+R</code>,输入cmd,然后回车,打开命令行界面，然后输入<code>ipconfig/flushdns</code>,显示<code>已成功刷新 DNS 解析缓存</code>就成功了。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/09/校园网开IPV6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-old/ipv6-hosts-master/README" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="What"><a href="#What" class="headerlink" title="What"></a>What</h2><p>Hosts file which is used for improving IPv6 access speed to Google, YouTube,<br>Facebook, Wikipedia, etc. in Mainland China.</p>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hosts</td>
+<td><a href="https://raw.githubusercontent.com/lennylxx/ipv6-hosts/master/hosts" target="_blank" rel="noopener">https://raw.githubusercontent.com/lennylxx/ipv6-hosts/master/hosts</a></td>
+</tr>
+<tr>
+<td>Wiki</td>
+<td><a href="https://github.com/lennylxx/ipv6-hosts/wiki" target="_blank" rel="noopener">https://github.com/lennylxx/ipv6-hosts/wiki</a></td>
+</tr>
+<tr>
+<td>Info</td>
+<td><a href="https://docs.google.com/spreadsheets/d/1a5HI0lkc1TycJdwJnCVDVd3x6_gemI3CQhNHhdsVmP8" target="_blank" rel="noopener">1e100 servers deployment geoinfo</a>, <a href="https://docs.google.com/spreadsheets/d/14gT1GV1IE0oYCq-1Dy747_5FWNxL26R-9T5htJ485dY" target="_blank" rel="noopener">SN-domain servers list</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>You may need <a href="https://www.eff.org/https-everywhere" target="_blank" rel="noopener">HTTPS Everywhere</a> to secure your transmission.</li>
+<li><a href="https://github.com/lennylxx/ipv6-hosts/wiki/sn-domains" target="_blank" rel="noopener">How to decode Google SN domains</a></li>
+<li>How to <a href="https://github.com/lennylxx/ipv6-hosts/wiki/Do-It-Yourself" target="_blank" rel="noopener">Do It Yourself</a></li>
+</ul>
+<h2 id="Scripts"><a href="#Scripts" class="headerlink" title="Scripts"></a>Scripts</h2><p><a href="update_hosts.py">update_hosts.py</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">usage: update_hosts [OPTIONS] FILE</span><br><span class="line">A simple multi-threading tool used for updating hosts file.</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -h, --help             show this help message and exit</span><br><span class="line">  -s DNS                 set another dns server, default: 2001:4860:4860::8844</span><br><span class="line">  -o OUT_FILE            output file, default: inputfilename.out</span><br><span class="line">  -t QUERY_TYPE          dig command query type, default: aaaa</span><br><span class="line">  -c, --cname            write canonical name into hosts file</span><br><span class="line">  -n THREAD_NUM          set the number of worker threads, default: 10</span><br></pre></td></tr></table></figure>
+<p><a href="merge_snippets.sh">merge_snippets.sh</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">usage: ./merge_snippets.sh new_hosts</span><br></pre></td></tr></table></figure>
+<h2 id="Some-Public-DNS-Servers"><a href="#Some-Public-DNS-Servers" class="headerlink" title="Some Public DNS Servers"></a>Some Public DNS Servers</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>USA</th>
+<th>USA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hostname</td>
+<td><strong>ordns.he.net</strong></td>
+<td><strong>tserv1.lax1.he.net</strong></td>
+</tr>
+<tr>
+<td>IPv6</td>
+<td>2001:470:20::2</td>
+<td>2001:470:0:9d::2</td>
+</tr>
+<tr>
+<td>IPv4</td>
+<td>74.82.42.42</td>
+<td>66.220.18.42</td>
+</tr>
+<tr>
+<td>ISP</td>
+<td>Hurricane Electric Inc.</td>
+<td>Hurricane Electric Inc.</td>
+</tr>
+<tr>
+<td>City</td>
+<td>Anycast</td>
+<td>Los Angeles</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Hong Kong</th>
+<th>Japan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hostname</td>
+<td><strong>dns.hutchcity.com</strong></td>
+<td><strong>ns01.miinet.jp</strong></td>
+</tr>
+<tr>
+<td>IPv4</td>
+<td>202.45.84.58</td>
+<td>203.112.2.4</td>
+</tr>
+<tr>
+<td>ISP</td>
+<td>Hutchison Whampoa Ltd.</td>
+<td>UCOM Corporation</td>
+</tr>
+<tr>
+<td>City</td>
+<td>Hong Kong</td>
+<td>Tokyo</td>
+</tr>
+</tbody>
+</table>
+<p>More public DNS servers please refer to <a href="http://public-dns.info" target="_blank" rel="noopener">http://public-dns.info</a></p>
+<h2 id="Privacy"><a href="#Privacy" class="headerlink" title="Privacy"></a>Privacy</h2><ul>
+<li>The hosts file just redirects domain to its official IPs. You can check them on any other public DNS servers.</li>
+<li>There is no absolute privacy on the Internet. Learn to protect yourself.</li>
+<li>Act smart.</li>
+</ul>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>Code of this project is licensed under the <a href="LICENSE">MIT license</a>.<br>Content of this project (including hosts files, wiki, and Google sheets) is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="noopener"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png" alt="CC Image"></a>.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/05/old/ipv6-hosts-master/README/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-git的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -367,162 +597,9 @@
 
 
   
-    <article id="post-make命令用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/22/make命令用法/">make命令用法</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/22/make命令用法/" class="archive-article-date">
-  	<time datetime="2018-04-22T15:50:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.使用make命令需要条件：同一个文件夹下多个.c文件和一个makefile文件，如图：<br><img src="http://p6hlch5jf.bkt.clouddn.com/make_list1.png" alt=""><br>
-        
-          <a class="article-more-a" href="/2018/04/22/make命令用法/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/22/make命令用法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Vim" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/19/Vim/">Vim</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/19/Vim/" class="archive-article-date">
-  	<time datetime="2018-04-19T04:46:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.设置行号：<code>set nu</code></p>
-<p>取消行号：<code>set uonu</code></p>
-        
-          <a class="article-more-a" href="/2018/04/19/Vim/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/19/Vim/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -638,15 +715,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">旧事</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
