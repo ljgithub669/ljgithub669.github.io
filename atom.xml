@@ -105,9 +105,9 @@
     <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/05/06/%E9%9F%B3%E4%B9%90%E5%A2%99/"/>
     <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/05/06/音乐墙/</id>
     <published>2018-05-06T10:06:02.000Z</published>
-    <updated>2018-05-06T10:06:02.363Z</updated>
+    <updated>2018-06-10T06:24:48.713Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>暂时没想好以什么形式展现，尽量在暑假内列一个清单，或者直接把网易云歌单贴出来。</p><p>音乐很美妙，生活很美好！</p>]]></content>
     
     <summary type="html">
     
@@ -118,6 +118,8 @@
     
     </summary>
     
+    
+      <category term="生活" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
