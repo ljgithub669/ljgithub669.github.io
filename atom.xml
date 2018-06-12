@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/"/>
-  <updated>2018-06-10T06:08:32.415Z</updated>
+  <updated>2018-06-12T14:22:31.654Z</updated>
   <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>电影墙</title>
+    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/06/12/%E7%94%B5%E5%BD%B1%E5%A2%99/"/>
+    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/06/12/电影墙/</id>
+    <published>2018-06-12T14:19:56.000Z</published>
+    <updated>2018-06-12T14:22:31.654Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>简介稍后补充</p><blockquote><p>《阿凡达》</p></blockquote><blockquote><p>《脑中的橡皮擦》</p></blockquote><a id="more"></a><blockquote><p>《》</p></blockquote><blockquote><p>《》</p></blockquote><blockquote><p>《》</p></blockquote><blockquote><p>《》</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;简介稍后补充&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;《阿凡达》&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;《脑中的橡皮擦》&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>Python的if ——__name__====&#39;__main__&#39;用法</title>
@@ -60,27 +86,6 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/06/05/old/ipv6-hosts-master/README/"/>
-    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/06/05/old/ipv6-hosts-master/README/</id>
-    <published>2018-06-05T11:06:24.863Z</published>
-    <updated>2018-05-16T10:09:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="What"><a href="#What" class="headerlink" title="What"></a>What</h2><p>Hosts file which is used for improving IPv6 access speed to Google, YouTube,<br>Facebook, Wikipedia, etc. in Mainland China.</p><table><thead><tr><th>\</th><th></th></tr></thead><tbody><tr><td>Hosts</td><td><a href="https://raw.githubusercontent.com/lennylxx/ipv6-hosts/master/hosts" target="_blank" rel="noopener">https://raw.githubusercontent.com/lennylxx/ipv6-hosts/master/hosts</a></td></tr><tr><td>Wiki</td><td><a href="https://github.com/lennylxx/ipv6-hosts/wiki" target="_blank" rel="noopener">https://github.com/lennylxx/ipv6-hosts/wiki</a></td></tr><tr><td>Info</td><td><a href="https://docs.google.com/spreadsheets/d/1a5HI0lkc1TycJdwJnCVDVd3x6_gemI3CQhNHhdsVmP8" target="_blank" rel="noopener">1e100 servers deployment geoinfo</a>, <a href="https://docs.google.com/spreadsheets/d/14gT1GV1IE0oYCq-1Dy747_5FWNxL26R-9T5htJ485dY" target="_blank" rel="noopener">SN-domain servers list</a></td></tr></tbody></table><ul><li>You may need <a href="https://www.eff.org/https-everywhere" target="_blank" rel="noopener">HTTPS Everywhere</a> to secure your transmission.</li><li><a href="https://github.com/lennylxx/ipv6-hosts/wiki/sn-domains" target="_blank" rel="noopener">How to decode Google SN domains</a></li><li>How to <a href="https://github.com/lennylxx/ipv6-hosts/wiki/Do-It-Yourself" target="_blank" rel="noopener">Do It Yourself</a></li></ul><h2 id="Scripts"><a href="#Scripts" class="headerlink" title="Scripts"></a>Scripts</h2><p><a href="update_hosts.py">update_hosts.py</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">usage: update_hosts [OPTIONS] FILE</span><br><span class="line">A simple multi-threading tool used for updating hosts file.</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -h, --help             show this help message and exit</span><br><span class="line">  -s DNS                 set another dns server, default: 2001:4860:4860::8844</span><br><span class="line">  -o OUT_FILE            output file, default: inputfilename.out</span><br><span class="line">  -t QUERY_TYPE          dig command query type, default: aaaa</span><br><span class="line">  -c, --cname            write canonical name into hosts file</span><br><span class="line">  -n THREAD_NUM          set the number of worker threads, default: 10</span><br></pre></td></tr></table></figure><p><a href="merge_snippets.sh">merge_snippets.sh</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">usage: ./merge_snippets.sh new_hosts</span><br></pre></td></tr></table></figure><h2 id="Some-Public-DNS-Servers"><a href="#Some-Public-DNS-Servers" class="headerlink" title="Some Public DNS Servers"></a>Some Public DNS Servers</h2><table><thead><tr><th></th><th>USA</th><th>USA</th></tr></thead><tbody><tr><td>Hostname</td><td><strong>ordns.he.net</strong></td><td><strong>tserv1.lax1.he.net</strong></td></tr><tr><td>IPv6</td><td>2001:470:20::2</td><td>2001:470:0:9d::2</td></tr><tr><td>IPv4</td><td>74.82.42.42</td><td>66.220.18.42</td></tr><tr><td>ISP</td><td>Hurricane Electric Inc.</td><td>Hurricane Electric Inc.</td></tr><tr><td>City</td><td>Anycast</td><td>Los Angeles</td></tr></tbody></table><table><thead><tr><th></th><th>Hong Kong</th><th>Japan</th></tr></thead><tbody><tr><td>Hostname</td><td><strong>dns.hutchcity.com</strong></td><td><strong>ns01.miinet.jp</strong></td></tr><tr><td>IPv4</td><td>202.45.84.58</td><td>203.112.2.4</td></tr><tr><td>ISP</td><td>Hutchison Whampoa Ltd.</td><td>UCOM Corporation</td></tr><tr><td>City</td><td>Hong Kong</td><td>Tokyo</td></tr></tbody></table><p>More public DNS servers please refer to <a href="http://public-dns.info" target="_blank" rel="noopener">http://public-dns.info</a></p><h2 id="Privacy"><a href="#Privacy" class="headerlink" title="Privacy"></a>Privacy</h2><ul><li>The hosts file just redirects domain to its official IPs. You can check them on any other public DNS servers.</li><li>There is no absolute privacy on the Internet. Learn to protect yourself.</li><li>Act smart.</li></ul><h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>Code of this project is licensed under the <a href="LICENSE">MIT license</a>.<br>Content of this project (including hosts files, wiki, and Google sheets) is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="noopener"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png" alt="CC Image"></a>.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>git的使用</title>
     <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/05/17/git%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/05/17/git的使用/</id>
@@ -105,16 +110,26 @@
     <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/05/06/%E9%9F%B3%E4%B9%90%E5%A2%99/"/>
     <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/05/06/音乐墙/</id>
     <published>2018-05-06T10:06:02.000Z</published>
-    <updated>2018-06-11T10:52:32.226Z</updated>
+    <updated>2018-06-12T14:19:01.060Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>暂时没想好以什么形式展现，尽量在暑假内列一个清单，或者直接把网易云歌单贴出来。</p><p>音乐很美妙，生活很美好！</p><p>1.<a href="http://music.163.com/song/32628933/?userid=590854430" target="_blank" rel="noopener">《孙大剩》</a></p><blockquote><p>可长大后却发现自己是那么平庸</p></blockquote><p>2.<a href="http://music.163.com/song/526464145/?userid=590854430" target="_blank" rel="noopener">《喜欢》</a></p><blockquote><p>扛住了柴米油盐的麻烦，扛住了朋友聚会的刁难</p></blockquote><p>3.<a href="">《》</a></p><p>4.<a href="">《》</a></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>暂时没想好以什么形式展现，尽量在暑假内列一个清单，或者直接把网易云歌单贴出来。</p><p>音乐很美妙，生活很美好！</p><p>音乐顺序是随机的，还未来得及整理！</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="0" height="0" src="http://music.163.com/m/song?id=31445772&userid=590854430"><br></iframe> <p>1.<a href="http://music.163.com/song/32628933/?userid=590854430" target="_blank" rel="noopener">《孙大剩》</a></p><blockquote><p>可长大后却发现自己是那么平庸</p></blockquote><p>2.<a href="http://music.163.com/song/526464145/?userid=590854430" target="_blank" rel="noopener">《喜欢》</a></p><blockquote><p>扛住了柴米油盐的麻烦，扛住了朋友聚会的刁难</p></blockquote><a id="more"></a><p>3.<a href="http://music.163.com/m/song?id=470759757&amp;userid=590854430" target="_blank" rel="noopener">《不露声色》</a></p><blockquote><p>中伤不是你的强项，黑夜看不见你的坚强</p></blockquote><p>4.<a href="http://music.163.com/m/song?id=447061584&amp;userid=590854430" target="_blank" rel="noopener">《七月上》</a></p><blockquote><p>笑是神的伪装，笑是强忍的伤</p></blockquote><p>5.<a href="http://music.163.com/m/song?id=449272168&amp;userid=590854430" target="_blank" rel="noopener">《寻乡》</a></p><blockquote><p>撑着伞的姑娘，也许笑的明朗</p></blockquote><p>6.<a href="http://music.163.com/m/song?id=461074907&amp;userid=590854430" target="_blank" rel="noopener">《寂静之空》</a></p><blockquote><p>思念的纯音乐</p></blockquote><p>7.<a href="http://music.163.com/m/song?id=537876700&amp;userid=590854430" target="_blank" rel="noopener">《弦上有春秋》</a></p><blockquote><p>青山延绵，是娇艳的美人尖</p></blockquote><p>8.<a href="http://music.163.com/m/song?id=452986458&amp;userid=590854430" target="_blank" rel="noopener">《红昭愿》</a></p><blockquote><p>年少风雅鲜衣怒马，也不过一刹那</p></blockquote><p>9.<a href="http://music.163.com/m/song?id=432506345&amp;userid=590854430" target="_blank" rel="noopener">《童话镇》</a></p><blockquote><p>总有一条蜿蜒在童话镇里七彩的河</p></blockquote><p>10.<a href="http://music.163.com/m/song?id=468517654&amp;userid=590854430" target="_blank" rel="noopener">《动物世界》</a></p><blockquote><p>人类用沙，想捏出梦里的通天塔</p></blockquote><p>11.<a href="http://music.163.com/m/song?id=27808044&amp;userid=590854430" target="_blank" rel="noopener">《丑八怪》</a></p><blockquote><p>如果世界漆黑，其实我很美</p></blockquote><p>12.<a href="http://music.163.com/m/song?id=449818741&amp;userid=590854430" target="_blank" rel="noopener">《光年之外》</a></p><blockquote><p>我没想到，为了你，我能疯狂到，山崩海啸</p></blockquote><p>13.<a href="http://music.163.com/m/song?id=525241230&amp;userid=590854430" target="_blank" rel="noopener">《狐狸》</a></p><blockquote><p>世人太警惕，道听途说里，口碑轮不到狐狸</p></blockquote><p>14.<a href="http://music.163.com/m/song?id=3163120&amp;userid=590854430" target="_blank" rel="noopener">《Safe and sound》</a></p><blockquote><p>Just clone you eyes</p></blockquote><p>15.<a href="http://music.163.com/m/song?id=30431367&amp;userid=590854430" target="_blank" rel="noopener">《走马》</a></p><blockquote><p>世界孤立我，任他奚落</p></blockquote><p>16.<a href="http://music.163.com/m/song?id=376312&amp;userid=590854430" target="_blank" rel="noopener">《在他乡》</a></p><blockquote><p>我多想回到家乡，再回到她的身旁</p></blockquote><p>17.<a href="http://music.163.com/m/song?id=31445772&amp;userid=590854430" target="_blank" rel="noopener">《理想三旬》</a></p><blockquote><p>就老去吧，孤独别醒来</p></blockquote><p>18.<a href="http://music.163.com/m/song?id=104322&amp;userid=590854430" target="_blank" rel="noopener">《我是神仙》</a></p><blockquote><p>一瞬间我摆脱善恶人世间里走</p></blockquote><p>19.<a href="http://music.163.com/m/song?id=549309116&amp;userid=590854430" target="_blank" rel="noopener">《离人愁》</a></p><blockquote><p>我应在江湖悠悠，饮一壶浊酒</p></blockquote><p>20.<a href="http://music.163.com/m/song?id=443194017&amp;userid=590854430" target="_blank" rel="noopener">《绿茶》</a></p><blockquote><p>人说长大后有很多失意</p></blockquote><p>21.<a href="http://music.163.com/m/song?id=455358996&amp;userid=590854430" target="_blank" rel="noopener">《豆花之歌》</a></p><blockquote><p>脑海里仍旧是你的笑脸</p></blockquote><p>22.<a href="http://music.163.com/m/song?id=5260494&amp;userid=590854430" target="_blank" rel="noopener">《一直很安静》</a></p><blockquote><p>给你的爱一直很安静</p></blockquote>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
+      &lt;p&gt;暂时没想好以什么形式展现，尽量在暑假内列一个清单，或者直接把网易云歌单贴出来。&lt;/p&gt;
+&lt;p&gt;音乐很美妙，生活很美好！&lt;/p&gt;
+&lt;p&gt;音乐顺序是随机的，还未来得及整理！&lt;/p&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;0&quot; height=&quot;0&quot; src=&quot;http://music.163.com/m/song?id=31445772&amp;userid=590854430&quot;&gt;&lt;br&gt;&lt;/iframe&gt; 
+
+
+&lt;p&gt;1.&lt;a href=&quot;http://music.163.com/song/32628933/?userid=590854430&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《孙大剩》&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可长大后却发现自己是那么平庸&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2.&lt;a href=&quot;http://music.163.com/song/526464145/?userid=590854430&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《喜欢》&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;扛住了柴米油盐的麻烦，扛住了朋友聚会的刁难&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
