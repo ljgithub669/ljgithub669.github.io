@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg">
-  <title>linux基础命令 | Aspire</title>
+  <title>opencv3.4+vs2015+海康摄像头 | Aspire</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、文件操作和权限管理1.只有root能执行的命令，在/sbin或/usr/sbin下（sbinsuper binary） 2.所有用户：在/bin或/usr/bin下">
+  <meta name="description" content="一、环境VS2015、opencv3.4、海康摄像头（DS-2CD3T20D_I5） 目的：使用opencv，通过网线获取摄像头采集的视频信息，然后对视频信息进行处理。">
 <meta name="keywords" content="技术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux基础命令">
-<meta property="og:url" content="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/19/linux基础命令/index.html">
+<meta property="og:title" content="opencv3.4+vs2015+海康摄像头">
+<meta property="og:url" content="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/08/17/opencv3-4-vs2015-海康摄像头/index.html">
 <meta property="og:site_name" content="Aspire">
-<meta property="og:description" content="一、文件操作和权限管理1.只有root能执行的命令，在/sbin或/usr/sbin下（sbinsuper binary） 2.所有用户：在/bin或/usr/bin下">
+<meta property="og:description" content="一、环境VS2015、opencv3.4、海康摄像头（DS-2CD3T20D_I5） 目的：使用opencv，通过网线获取摄像头采集的视频信息，然后对视频信息进行处理。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-20T16:52:57.397Z">
+<meta property="og:image" content="http://p6hlch5jf.bkt.clouddn.com/hai_kang.png">
+<meta property="og:updated_time" content="2018-08-17T15:13:00.358Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux基础命令">
-<meta name="twitter:description" content="一、文件操作和权限管理1.只有root能执行的命令，在/sbin或/usr/sbin下（sbinsuper binary） 2.所有用户：在/bin或/usr/bin下">
+<meta name="twitter:title" content="opencv3.4+vs2015+海康摄像头">
+<meta name="twitter:description" content="一、环境VS2015、opencv3.4、海康摄像头（DS-2CD3T20D_I5） 目的：使用opencv，通过网线获取摄像头采集的视频信息，然后对视频信息进行处理。">
+<meta name="twitter:image" content="http://p6hlch5jf.bkt.clouddn.com/hai_kang.png">
   
     <link rel="alternative" href="/atom.xml" title="Aspire" type="application/atom+xml">
   
@@ -155,191 +157,392 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-linux基础命令" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-opencv3-4-vs2015-海康摄像头" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      linux基础命令
+      opencv3.4+vs2015+海康摄像头
     </h1>
   
 
         
-        <a href="/2018/04/19/linux基础命令/" class="archive-article-date">
-  	<time datetime="2018-04-19T04:43:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-19</time>
+        <a href="/2018/08/17/opencv3-4-vs2015-海康摄像头/" class="archive-article-date">
+  	<time datetime="2018-08-17T14:14:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、文件操作和权限管理"><a href="#一、文件操作和权限管理" class="headerlink" title="一、文件操作和权限管理"></a>一、文件操作和权限管理</h2><p>1.只有root能执行的命令，在/sbin或/usr/sbin下（sbinsuper binary）</p>
-<p>2.所有用户：在/bin或/usr/bin下<br><a id="more"></a><br>3.<code>drwxr-xr-x 22</code></p>
-<p><code>d</code> 表示目录</p>
-<p><code>-</code>表示二进制文件</p>
-<p><code>l</code>表示软件链接文件link</p>
-<p><code>22</code> 表示硬链接个数</p>
-<p>4.<code>cd</code>意思是change directory</p>
-<p>5.<code>pwd</code>意思是 print working directory</p>
-<p>6.<code>cp -R</code>可以复制目录</p>
-<p>7.<code>ctrl+c</code>终止命令</p>
-<p>8.<code>mv</code>移动文件、改名</p>
-<p>9.<code>head -20 /etc/name</code> 查看前20行</p>
-<p>10.<code>tail -15 /etc/name</code> 查看后几行</p>
-<p>11.软链接—&gt;类似于快捷方式图标</p>
-<p><code>ln -s /name /newname</code>创建软连接</p>
-<p>12.硬链接（不能跨分区生成链接）</p>
-<p>没有s，功能比cp强大，可以同步更新比如<code>ln /name /newname</code></p>
-<p>13.<code>ls -i</code>(inode)</p>
-<p>查看文件i节点，文件唯一数字标志，但一个i节点可对应多个文件，比如硬链接  </p>
-<p>14.权限处理命令</p>
-<pre><code>chmod
-          u + r
-
-          g - w
-
-          o = x
-</code></pre><p><code>u</code>   使用者</p>
-<p><code>g</code>   群组</p>
-<p><code>o</code>   其他人</p>
-<p>15.<code>chmod 755 filename</code></p>
-<p>16.<code>su - lijie</code>切换用户</p>
-<p>17.改变文件所有者</p>
-<p>chown 用户名 文件名</p>
-<ol>
-<li>添加用户</li>
+        <h2 id="一、环境"><a href="#一、环境" class="headerlink" title="一、环境"></a>一、环境</h2><p>VS2015、opencv3.4、海康摄像头（DS-2CD3T20D_I5）</p>
+<p><strong>目的</strong>：使用opencv，通过网线获取摄像头采集的视频信息，然后对视频信息进行处理。</p>
+<a id="more"></a>
+<h2 id="二、所需资料"><a href="#二、所需资料" class="headerlink" title="二、所需资料"></a>二、所需资料</h2><ol>
+<li>去<a href="http://www.hikvision.com/cn/download_61.html" target="_blank" rel="noopener">官网</a>下载SDK（SDK是一系列文件的组合，包括lib、dll、.h、文档、示例等等；API是对程序而言的，提供用户编程时的接口，即一系列模块化的类和函数。 可以认为API是包含在SDK中的。）,我下载的是x64版本</li>
+<li>创建一个VS工程，使用如下代码：</li>
 </ol>
-<p><code>useradd lijie</code></p>
-<p><code>passwd 11111111</code></p>
-<p>19.<code>chgrp 用户名 文件名</code>改变所属组</p>
-<p>20.设置默认权限</p>
-<p><code>umask -S（大写）</code>查看默认权限</p>
-<p>更改：<code>umask 权限掩码</code>（比如025，实际是777-025=752）</p>
-<h2 id="二、文件查找"><a href="#二、文件查找" class="headerlink" title="二、文件查找"></a>二、文件查找</h2><p>1.which 命令</p>
-<p>查看命令的绝对路径</p>
-<p>2.whereis 命令</p>
-<p>可以找到文件路径和帮助文档所在位置</p>
-<p>3.find 搜素路径 搜索关键字 文件名</p>
-<p><code>find /home -name filename</code></p>
-<p><code>-name</code>  根据文件名查找</p>
-<p><code>\*</code>  匹配任意字符</p>
-<p><code>find /home -name li*</code></p>
-<p><code>？</code> 匹配当字符</p>
-<hr>
-<p><code>find /home -name l????</code></p>
-<p><code>-size</code> 文件大小（block数据块，512字节=0.5KB）</p>
-<p>100M=102400KB=204800block</p>
-<p>大于 +</p>
-<p>小于 —</p>
-<p><code>find /home -size +100</code></p>
-<hr>
-<p><code>-user</code> 文件所有者</p>
-<p><code>find /home -user 用户名（root）</code></p>
-<hr>
-<p>时间值</p>
-<p>以天为单位 <code>ctime atime mtime</code></p>
-<p>分钟  <code>cmin amin mmin</code> </p>
-<p><code>c</code>  change(文件属性被改变过）</p>
-<p><code>a</code>  access（被访问过）</p>
-<p><code>m</code>  modify(被修改过)</p>
-<p><code>find /home -mmin -120</code></p>
-<p><code>-a</code> (and)</p>
-<p><code>-o</code> (or)</p>
-<hr>
-<p><code>-type</code> 文件类型</p>
-<p> <code>f</code> 二进制文件</p>
-<p><code>l</code> 软连接文件</p>
-<p><code>d</code> 目录</p>
-<p><code>find /home -type d</code></p>
-<p><code>find /home -type d -o -name li???</code></p>
-<p><code>find /home -type d -exec ls -l {}\;</code><br>查看文件详细信息</p>
-<p>删除特殊文件名：<code>rm -rf &quot;a b&quot;</code></p>
-<p>或者<code>find . inum 156 -exec rm {} \;</code></p>
-<hr>
-<p>locate file</p>
-<p><code>grep 关键词 路径</code></p>
-<hr>
-<p><code>man</code> 命令（help）</p>
-<p><code>info</code> 命令（类似man）</p>
-<p><code>whatis ls</code></p>
-<h1 id="三、压缩包"><a href="#三、压缩包" class="headerlink" title="三、压缩包"></a>三、压缩包</h1><ol>
-<li>命令名称：<code>gzip 文件名</code></li>
+<pre><code>#include &lt;cstdlib&gt;
+#include &lt;cstring&gt;
+#include &lt;iostream&gt;
+#include &quot;Windows.h&quot;
+#include &quot;HCNetSDK.h&quot;
+#include &quot;plaympeg4.h&quot;
+#include &lt;opencv2\opencv.hpp&gt;
+#include &lt;time.h&gt;
+
+using namespace std;
+
+using namespace cv;
+
+LONG nPort = -1;
+
+volatile int gbHandling = 3;
+
+//解码回调 视频为YUV数据(YV12)，音频为PCM数据
+
+void CALLBACK DecCBFun(long nPort, char * pBuf, long nSize, FRAME_INFO * pFrameInfo, long nReserved1, long nReserved2)
+
+{
+
+    if (gbHandling)
+
+    {
+
+        gbHandling--;
+
+        return;
+
+    }
+
+
+
+    long lFrameType = pFrameInfo-&gt;nType;
+
+    if (lFrameType == T_YV12)
+
+    {
+
+
+
+        Mat pImg(pFrameInfo-&gt;nHeight, pFrameInfo-&gt;nWidth, CV_8UC3);
+
+        Mat src(pFrameInfo-&gt;nHeight + pFrameInfo-&gt;nHeight / 2, pFrameInfo-&gt;nWidth, CV_8UC1, pBuf);
+
+        cvtColor(src, pImg, CV_YUV2BGR_YV12);
+
+        //  Sleep(-1);
+
+        imshow(&quot;IPCamera&quot;, pImg);
+
+        waitKey(1);
+
+
+
+    }
+
+
+
+    gbHandling = 3;
+
+
+
+}
+
+
+
+
+
+///实时流回调
+
+void CALLBACK fRealDataCallBack(LONG lRealHandle, DWORD dwDataType, BYTE *pBuffer, DWORD dwBufSize, void *pUser)
+
+{
+
+
+
+    switch (dwDataType)
+
+    {
+
+    case NET_DVR_SYSHEAD: //系统头
+
+
+
+        if (!PlayM4_GetPort(&amp;nPort))  //获取播放库未使用的通道号
+
+        {
+
+            break;
+
+        }
+
+        //m_iPort = lPort; //第一次回调的是系统头，将获取的播放库port号赋值给全局port，下次回调数据时即使用此port号播放
+
+        if (dwBufSize &gt; 0)
+
+        {
+
+            if (!PlayM4_SetStreamOpenMode(nPort, STREAME_REALTIME))  //设置实时流播放模式
+
+            {
+
+                break;
+
+            }
+
+
+
+            if (!PlayM4_OpenStream(nPort, pBuffer, dwBufSize, 10 * 1024 * 1024)) //打开流接口
+
+            {
+
+                break;
+
+            }
+
+
+
+            if (!PlayM4_Play(nPort, NULL)) //播放开始
+
+            {
+
+                break;
+
+            }
+
+            if (!PlayM4_SetDecCallBack(nPort, DecCBFun))
+
+            {
+
+                break;
+
+            }
+
+        }
+
+        break;
+
+    case NET_DVR_STREAMDATA:   //码流数据
+
+        if (dwBufSize &gt; 0 &amp;&amp; nPort != -1)
+
+        {
+
+            if (!PlayM4_InputData(nPort, pBuffer, dwBufSize))
+
+            {
+
+                cout &lt;&lt; &quot;error&quot; &lt;&lt; PlayM4_GetLastError(nPort) &lt;&lt; endl;
+
+                break;
+
+            }
+
+        }
+
+        break;
+
+    default: //其他数据
+
+        if (dwBufSize &gt; 0 &amp;&amp; nPort != -1)
+
+        {
+
+            if (!PlayM4_InputData(nPort, pBuffer, dwBufSize))
+
+            {
+
+                break;
+
+            }
+
+        }
+
+        break;
+
+    }
+
+}
+
+
+
+
+
+void CALLBACK g_ExceptionCallBack(DWORD dwType, LONG lUserID, LONG lHandle, void *pUser)
+
+{
+
+    char tempbuf[256] = { 0 };
+
+    switch (dwType)
+
+    {
+
+    case EXCEPTION_RECONNECT:    //预览时重连
+
+        printf(&quot;----------reconnect--------%d\n&quot;, time(NULL));
+
+        break;
+
+    default:
+
+        break;
+
+    }
+
+}
+
+
+
+void main()
+
+{
+
+
+
+    //---------------------------------------
+
+    // 初始化
+
+    NET_DVR_Init();
+
+    //设置连接时间与重连时间
+
+    NET_DVR_SetConnectTime(2000, 1);
+
+    NET_DVR_SetReconnect(10000, true);
+
+
+
+
+
+    //---------------------------------------
+
+    // 注册设备
+
+    LONG lUserID;
+
+    NET_DVR_DEVICEINFO_V30 struDeviceInfo;
+
+    lUserID = NET_DVR_Login_V30(&quot;192.168.3.16&quot;, 8000, &quot;admin&quot;, &quot;admin123&quot;, &amp;struDeviceInfo);
+
+    if (lUserID &lt; 0)
+
+    {
+
+        printf(&quot;Login error, %d\n&quot;, NET_DVR_GetLastError());
+
+        NET_DVR_Cleanup();
+
+        return;
+
+    }
+
+
+
+    //---------------------------------------
+
+    //设置异常消息回调函数
+
+    NET_DVR_SetExceptionCallBack_V30(0, NULL, g_ExceptionCallBack, NULL);
+
+
+
+    //---------------------------------------
+
+    //启动预览并设置回调数据流
+
+    LONG lRealPlayHandle;
+
+    cvNamedWindow(&quot;Mywindow&quot;, 0);
+
+    cvNamedWindow(&quot;IPCamera&quot;, 0);
+
+
+
+    HWND  h = (HWND)cvGetWindowHandle(&quot;Mywindow&quot;);
+
+    if (h == 0)
+
+    {
+
+        cout &lt;&lt; &quot;窗口创建失败&quot; &lt;&lt; endl;
+
+    }
+
+
+
+
+
+    NET_DVR_PREVIEWINFO struPlayInfo = { 0 };
+
+    struPlayInfo.hPlayWnd = h;         //需要SDK解码时句柄设为有效值，仅取流不解码时可设为空
+
+    struPlayInfo.lChannel = 1;           //预览通道号
+
+    struPlayInfo.dwStreamType = 0;       //0-主码流，1-子码流，2-码流3，3-码流4，以此类推
+
+    struPlayInfo.dwLinkMode = 0;         //0- TCP方式，1- UDP方式，2- 多播方式，3- RTP方式，4-RTP/RTSP，5-RSTP/HTTP
+
+
+
+    lRealPlayHandle = NET_DVR_RealPlay_V40(lUserID, &amp;struPlayInfo, fRealDataCallBack, NULL);
+
+
+
+    if (lRealPlayHandle &lt; 0)
+
+    {
+
+        printf(&quot;NET_DVR_RealPlay_V40 error\n&quot;);
+
+        printf(&quot;%d\n&quot;, NET_DVR_GetLastError());
+
+        NET_DVR_Logout(lUserID);
+
+        NET_DVR_Cleanup();
+
+        return;
+
+    }
+
+    waitKey();
+
+
+
+    Sleep(-1);
+
+    //---------------------------------------
+
+    //关闭预览
+
+    NET_DVR_StopRealPlay(lRealPlayHandle);
+
+    //注销用户
+
+    NET_DVR_Logout(lUserID);
+
+    //释放SDK资源
+
+    NET_DVR_Cleanup();
+
+
+
+    return;
+
+}
+</code></pre><ol>
+<li>配置路径（此步至关重要，关系成败）</li>
 </ol>
-<p>只能压缩文件，并且不保留原文件</p>
-<ol>
-<li>解压</li>
-</ol>
-<p><code>gunzip 文件名</code></p>
-<p><code>gzip -d 文件名</code></p>
-<p>3.<code>tar</code>:把目录打包成文件</p>
-<p><code>-c</code> 产生.tar打包文件</p>
-<p><code>-z</code> 打包同时压缩</p>
-<p><code>-f</code> 指定压缩后的文件名</p>
-<p><code>-v</code> 显示详细信息</p>
-<p><code>tar -zcvf newname oldname</code></p>
-<p><code>file 文件名</code>:查看文件属性，判断是不是压缩包</p>
-<hr>
-<p>可压缩目录<br><code>zip -r test.zip test(保存源文件)</code></p>
-<p><code>unzip</code>:解压</p>
-<hr>
-<p><code>.bz2(-k保留原文件)</code></p>
-<p>压缩:<code>bzip2 nnew.bz2 new</code></p>
-<p>解压:<code>bunzip2</code></p>
-<hr>
-<p>3.<code>write</code>可通讯</p>
-<pre><code>write lijie  
-
-这里可以直接写内容
-</code></pre><p><code>ctrl+d</code>结束</p>
-<hr>
-<p><code>wall(write all 写给所有人)</code></p>
-<hr>
-<p><code>ping 192.168.137.1</code></p>
-<p><code>ping -s 5220 ip</code>；发包</p>
-<p><code>ping -c 6(显示次数) ip</code></p>
-<hr>
-<p>shell应用</p>
-<p>bash</p>
-<p><code>clear=ctrl+l</code></p>
-<p><code>ctrl+u</code>(删除之前的命令)</p>
-<hr>
-<p>命令定义别名</p>
-<p><code>alias new=old</code></p>
-<p><code>alise drm=&quot;rm -rf&quot;</code></p>
-<p>删除别名:<code>unalise</code></p>
-<hr>
-<h1 id="四、输入输出重定向-0输入，1输出，2出错信息"><a href="#四、输入输出重定向-0输入，1输出，2出错信息" class="headerlink" title="四、输入输出重定向(0输入，1输出，2出错信息)"></a>四、输入输出重定向(0输入，1输出，2出错信息)</h1><p>输出：<code>ls -l /home &gt; /home/log</code></p>
-<p>还可以追加:<code>ls -l /home &gt;&gt; /home/log</code></p>
-<p>输入：<code>wall &lt; /home/log</code></p>
-<hr>
-<p>管道（|）：将一个命令的输出传送给另一个命令，作为另一个命令的输入。</p>
-<p><code>命令1 | 命令2 | 命令n</code></p>
-<p><code>ls -l /etc | more</code></p>
-<p><code>ls -l /etc | grep init</code></p>
-<p><code>ls -l /etc | grep init | wc -l</code></p>
-<hr>
-<p>命令连接符；</p>
-<p><code>ls;date;pwd</code></p>
-<p>逻辑与</p>
-<pre><code>命令1 &amp;&amp; 命令2
-
- √          √
-
- ×          ×
-</code></pre><p><code>ls &amp;&amp; pwd</code></p>
-<p>逻辑或（类似非）  ||</p>
-<pre><code>命令1 || 命令2
-
- ×          √
-
- √          ×
-</code></pre><hr>
-<p>命令替换符： 命令1 `命令2`</p>
-<p>将一个命令的输出作为另一个命令的参数</p>
-<p>ls -l `which touch`</p>
-<hr>
+<p>先配置头文件：VS–&gt;属性管理器右键–&gt;属性–&gt;VC++目录–&gt;包含目录–&gt;D:\my-softwear\OpenCV3.4.0\opencv_project\hai_kang_wei_shi_vedio\CH-HCNetSDKV5.3.5.46_build20180518_Win64\头文件</p>
+<p>然后配置库目录：VS–&gt;属性管理器右键–&gt;属性–&gt;VC++目录–&gt;库目录–&gt;D:\my-softwear\OpenCV3.4.0\opencv_project\hai_kang_wei_shi_vedio\CH-HCNetSDKV5.3.5.46_build20180518_Win64\库文件</p>
+<p><em>然后运行会发现出错，18个报错，内容都是无法解析的外部符号xxx，该符号在xxx中被引用</em></p>
+<p><strong>解决办法</strong>：（没有设置附加依赖项）VS–&gt;属性管理器右键–&gt;属性–&gt;链接器–&gt;输入–&gt;附加依赖项–&gt;D:\my-softwear\OpenCV3.4.0\opencv_project\hai_kang_wei_shi_vedio\CH-HCNetSDKV5.3.5.46_build20180518_Win64\库文件\PlayCtrl.lib<br>D:\my-softwear\OpenCV3.4.0\opencv_project\hai_kang_wei_shi_vedio\CH-HCNetSDKV5.3.5.46_build20180518_Win64\库文件\HCNetSDK.lib<br>D:\my-softwear\OpenCV3.4.0\opencv_project\hai_kang_wei_shi_vedio\CH-HCNetSDKV5.3.5.46_build20180518_Win64\库文件\HCCore.lib<br>D:\my-softwear\OpenCV3.4.0\opencv_project\hai_kang_wei_shi_vedio\CH-HCNetSDKV5.3.5.46_build20180518_Win64\库文件\GdiPlus.lib</p>
+<h2 id="三、运行结果"><a href="#三、运行结果" class="headerlink" title="三、运行结果"></a>三、运行结果</h2><p><img src="http://p6hlch5jf.bkt.clouddn.com/hai_kang.png" alt=""></p>
+<h2 id="四、踩过的坑"><a href="#四、踩过的坑" class="headerlink" title="四、踩过的坑"></a>四、踩过的坑</h2><p>代码在网上找了很多，而且也没有大的问题，一直没实现的原因就是配置环境问题。之前一直卡在上述问题上，主要是lib没配好。</p>
 
       
 
@@ -440,7 +643,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/19/linux基础命令/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/08/17/opencv3-4-vs2015-海康摄像头/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -454,18 +657,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/19/Vim/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Vim
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/04/14/Tensorflow学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Tensorflow学习笔记</div>
+    <a href="/2018/08/09/C-的一些小程序/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C++的一些小程序</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -492,7 +686,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、文件操作和权限管理"><span class="toc-number">1.</span> <span class="toc-text">一、文件操作和权限管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、文件查找"><span class="toc-number">2.</span> <span class="toc-text">二、文件查找</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、压缩包"><span class="toc-number"></span> <span class="toc-text">三、压缩包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、输入输出重定向-0输入，1输出，2出错信息"><span class="toc-number"></span> <span class="toc-text">四、输入输出重定向(0输入，1输出，2出错信息)</span></a>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、环境"><span class="toc-number">1.</span> <span class="toc-text">一、环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、所需资料"><span class="toc-number">2.</span> <span class="toc-text">二、所需资料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、运行结果"><span class="toc-number">3.</span> <span class="toc-text">三、运行结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、踩过的坑"><span class="toc-number">4.</span> <span class="toc-text">四、踩过的坑</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -506,7 +700,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="linux基础命令" data-title="linux基础命令" data-url="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/19/linux基础命令/"></div>
+	<div class="ds-thread" data-thread-key="opencv3-4-vs2015-海康摄像头" data-title="opencv3.4+vs2015+海康摄像头" data-url="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/08/17/opencv3-4-vs2015-海康摄像头/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -529,8 +723,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/19/linux基础命令/", 
-    sourceId: "linux基础命令",
+    url: "http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/08/17/opencv3-4-vs2015-海康摄像头/", 
+    sourceId: "opencv3-4-vs2015-海康摄像头",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -539,7 +733,7 @@
   
 
   
-  <div id="SOHUCS" sid="linux基础命令" ></div> 
+  <div id="SOHUCS" sid="opencv3-4-vs2015-海康摄像头" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
