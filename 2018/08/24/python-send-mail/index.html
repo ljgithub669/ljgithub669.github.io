@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg">
-  <title>Python的if ——__name__====&#39;__main__&#39;用法 | Aspire</title>
+  <title>python send mail | Aspire</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.这个语句实际作用不太大，但是会经常见到。算是一个程序入口，不过有些许差别，当语句在所在脚本执行时，会执行该语句后面的命令；当被调用时，则不执行。">
+  <meta name="description" content="参考文章 一、设置使用QQ邮箱发送，先要获得发件人QQ邮箱的IMAP/SMTP服务授权码，具体操作：QQ邮箱–&amp;gt;设置–&amp;gt;账户–&amp;gt;IMAP/SMTP服务对应的“开启”按钮–&amp;gt;通过手机发送短信获取授权码">
 <meta name="keywords" content="技术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python的if ——__name__====&#39;__main__&#39;用法">
-<meta property="og:url" content="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/06/10/Python的if-——-name-main-用法/index.html">
+<meta property="og:title" content="python send mail">
+<meta property="og:url" content="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/08/24/python-send-mail/index.html">
 <meta property="og:site_name" content="Aspire">
-<meta property="og:description" content="1.这个语句实际作用不太大，但是会经常见到。算是一个程序入口，不过有些许差别，当语句在所在脚本执行时，会执行该语句后面的命令；当被调用时，则不执行。">
+<meta property="og:description" content="参考文章 一、设置使用QQ邮箱发送，先要获得发件人QQ邮箱的IMAP/SMTP服务授权码，具体操作：QQ邮箱–&amp;gt;设置–&amp;gt;账户–&amp;gt;IMAP/SMTP服务对应的“开启”按钮–&amp;gt;通过手机发送短信获取授权码">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-10T06:08:32.415Z">
+<meta property="og:updated_time" content="2018-08-23T17:38:28.906Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python的if ——__name__====&#39;__main__&#39;用法">
-<meta name="twitter:description" content="1.这个语句实际作用不太大，但是会经常见到。算是一个程序入口，不过有些许差别，当语句在所在脚本执行时，会执行该语句后面的命令；当被调用时，则不执行。">
+<meta name="twitter:title" content="python send mail">
+<meta name="twitter:description" content="参考文章 一、设置使用QQ邮箱发送，先要获得发件人QQ邮箱的IMAP/SMTP服务授权码，具体操作：QQ邮箱–&amp;gt;设置–&amp;gt;账户–&amp;gt;IMAP/SMTP服务对应的“开启”按钮–&amp;gt;通过手机发送短信获取授权码">
   
     <link rel="alternative" href="/atom.xml" title="Aspire" type="application/atom+xml">
   
@@ -155,31 +155,56 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Python的if-——-name-main-用法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-python-send-mail" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Python的if ——__name__====&#39;__main__&#39;用法
+      python send mail
     </h1>
   
 
         
-        <a href="/2018/06/10/Python的if-——-name-main-用法/" class="archive-article-date">
-  	<time datetime="2018-06-10T05:59:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-10</time>
+        <a href="/2018/08/24/python-send-mail/" class="archive-article-date">
+  	<time datetime="2018-08-23T17:23:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.这个语句实际作用不太大，但是会经常见到。算是一个程序入口，不过有些许差别，当语句在所在脚本执行时，会执行该语句后面的命令；当被调用时，则不执行。</p>
-<a id="more"></a>
-<p>2.具体操作：</p>
-<p><a href="http://blog.konghy.cn/2017/04/24/python-entry-program/" target="_blank" rel="noopener">参考文章</a></p>
+        <p><a href="https://blog.csdn.net/galen2016/article/details/73350606" target="_blank" rel="noopener">参考文章</a></p>
+<h2 id="一、设置"><a href="#一、设置" class="headerlink" title="一、设置"></a>一、设置</h2><p>使用QQ邮箱发送，先要获得发件人QQ邮箱的IMAP/SMTP服务授权码，具体操作：QQ邮箱–&gt;设置–&gt;账户–&gt;IMAP/SMTP服务对应的“开启”按钮–&gt;通过手机发送短信获取授权码<br><a id="more"></a></p>
+<h2 id="二、代码"><a href="#二、代码" class="headerlink" title="二、代码"></a>二、代码</h2><pre><code>#coding=utf-8
+import smtplib
+from email.mime.text import MIMEText
+from email.header import Header
 
+#发送html格式的邮件
+
+#发送邮箱
+sender=&quot;642746796@qq.com&quot;
+#接收邮箱
+receiver=&quot;lijie669@outlook.com&quot;
+#发送邮件主题
+subject=&quot;居然测试成功了&quot;
+#发送邮箱服务器
+smtpserver=&quot;smtp.qq.com&quot;
+#发送邮箱用户/密码
+username=&quot;642746796@qq.com&quot;
+password=&quot;gyuyaqubtptfbfda&quot;
+
+#HTML形式的邮件
+msg=MIMEText(&quot;&lt;html&gt;&lt;h1&gt;牛逼啊！by lijie &lt;/h1&gt;&lt;/html&gt;&quot;,&quot;html&quot;,&quot;utf-8&quot;)
+msg[&quot;Subject&quot;]=Header(subject,&quot;utf-8&quot;)
+
+smtp=smtplib.SMTP_SSL(smtpserver, 465)
+smtp.login(username,password)
+smtp.sendmail(sender,receiver,msg.as_string())
+smtp.quit()
+</code></pre><h2 id="三、"><a href="#三、" class="headerlink" title="三、"></a>三、</h2>
       
 
       
@@ -279,7 +304,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/06/10/Python的if-——-name-main-用法/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/08/24/python-send-mail/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -293,18 +318,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/06/12/电影墙/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          电影墙
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/06/09/校园网开IPV6/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">校园网开IPV6</div>
+    <a href="/2018/08/17/opencv3-4-vs2015-海康摄像头/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">opencv3.4+vs2015+海康摄像头</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -331,7 +347,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    没有目录
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、设置"><span class="toc-number">1.</span> <span class="toc-text">一、设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、代码"><span class="toc-number">2.</span> <span class="toc-text">二、代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、"><span class="toc-number">3.</span> <span class="toc-text">三、</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -345,7 +361,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Python的if-——-name-main-用法" data-title="Python的if ——__name__====&#39;__main__&#39;用法" data-url="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/06/10/Python的if-——-name-main-用法/"></div>
+	<div class="ds-thread" data-thread-key="python-send-mail" data-title="python send mail" data-url="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/08/24/python-send-mail/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -368,8 +384,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/06/10/Python的if-——-name-main-用法/", 
-    sourceId: "Python的if-——-name-main-用法",
+    url: "http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/08/24/python-send-mail/", 
+    sourceId: "python-send-mail",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -378,7 +394,7 @@
   
 
   
-  <div id="SOHUCS" sid="Python的if-——-name-main-用法" ></div> 
+  <div id="SOHUCS" sid="python-send-mail" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
