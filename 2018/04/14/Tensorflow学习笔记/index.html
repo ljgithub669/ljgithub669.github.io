@@ -8,14 +8,18 @@
   <link rel="dns-prefetch" href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg">
   <title>Tensorflow学习笔记 | Aspire</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="reference 一、简介二、模型文件在checkpoint_dir目录下保存的文件结构 --checkpoint_dir     --checkpoint    //文本文件，可以通过此文件指定使用哪个model     --MyModel.meta  //是pd文件，包含变量、op、集合等     --MyModel.data-00000-of-00001   //与下面的合称ckpt文件，">
+<meta name="keywords" content="技术">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Tensorflow学习笔记">
 <meta property="og:url" content="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/14/Tensorflow学习笔记/index.html">
 <meta property="og:site_name" content="Aspire">
+<meta property="og:description" content="reference 一、简介二、模型文件在checkpoint_dir目录下保存的文件结构 --checkpoint_dir     --checkpoint    //文本文件，可以通过此文件指定使用哪个model     --MyModel.meta  //是pd文件，包含变量、op、集合等     --MyModel.data-00000-of-00001   //与下面的合称ckpt文件，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-14T15:15:07.514Z">
+<meta property="og:updated_time" content="2018-08-29T15:10:17.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tensorflow学习笔记">
+<meta name="twitter:description" content="reference 一、简介二、模型文件在checkpoint_dir目录下保存的文件结构 --checkpoint_dir     --checkpoint    //文本文件，可以通过此文件指定使用哪个model     --MyModel.meta  //是pd文件，包含变量、op、集合等     --MyModel.data-00000-of-00001   //与下面的合称ckpt文件，">
   
     <link rel="alternative" href="/atom.xml" title="Aspire" type="application/atom+xml">
   
@@ -171,7 +175,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p><a href="https://blog.csdn.net/huachao1001/article/details/78501928" target="_blank" rel="noopener">reference</a></p>
+<h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><h2 id="二、模型文件"><a href="#二、模型文件" class="headerlink" title="二、模型文件"></a>二、模型文件</h2><p>在checkpoint_dir目录下保存的文件结构</p>
+<pre><code>--checkpoint_dir
+    --checkpoint    //文本文件，可以通过此文件指定使用哪个model
+    --MyModel.meta  //是pd文件，包含变量、op、集合等
+    --MyModel.data-00000-of-00001   //与下面的合称ckpt文件，属于二进制文件，保存了所有的weights、biases、gradients（梯度）等变量
+    --MyModel.index
+</code></pre><h2 id="三、模型保存"><a href="#三、模型保存" class="headerlink" title="三、模型保存"></a>三、模型保存</h2><pre><code>import tensorflow as tf
+
+w1 = tf.Variable(tf.random_normal(shape=[2]), name=&apos;w1&apos;)
+w2 = tf.Variable(tf.random_normal(shape=[5]), name=&apos;w2&apos;)
+saver = tf.train.Saver()
+sess = tf.Session()
+sess.run(tf.global_variables_initializer())
+saver.save(sess, &apos;./checkpoint_dir/MyModel&apos;)
+</code></pre><h2 id="四、导入训练好的模型"><a href="#四、导入训练好的模型" class="headerlink" title="四、导入训练好的模型"></a>四、导入训练好的模型</h2><pre><code>import tensorflow as tf
+with tf.Session() as sess:    
+    saver = tf.train.import_meta_graph(&apos;./checkpoint_dir/MyModel.meta&apos;)
+    saver.restore(sess,tf.train.latest_checkpoint(&apos;./checkpoint_dir&apos;))
+    print(sess.run(&apos;w1:0&apos;))
+</code></pre>
       
 
       
@@ -210,6 +234,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -312,7 +347,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    没有目录
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、简介"><span class="toc-number">1.</span> <span class="toc-text">一、简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、模型文件"><span class="toc-number">2.</span> <span class="toc-text">二、模型文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、模型保存"><span class="toc-number">3.</span> <span class="toc-text">三、模型保存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、导入训练好的模型"><span class="toc-number">4.</span> <span class="toc-text">四、导入训练好的模型</span></a></li></ol>
                     </div>
                 </span>
             </div>
