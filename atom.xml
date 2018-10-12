@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/"/>
-  <updated>2018-09-23T13:06:22.322Z</updated>
+  <updated>2018-10-12T16:22:30.152Z</updated>
   <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ifdef用法</title>
+    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/10/13/ifdef%E7%94%A8%E6%B3%95/"/>
+    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/10/13/ifdef用法/</id>
+    <published>2018-10-12T16:09:52.000Z</published>
+    <updated>2018-10-12T16:22:30.152Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h2><p>c++中经常看到这样的代码，主要作用是调试的时候，选择性的显示一些内容</p><a id="more"></a><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>头文件’head.h’<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#ifndef DEBUG  </span><br><span class="line">#define DEBUG  </span><br><span class="line">#endif</span><br></pre></td></tr></table></figure></p><p>源文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;iostream.h&quot;  </span><br><span class="line">#include &quot;head.h&quot;  </span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;  </span><br><span class="line">#ifdef DEBUG   </span><br><span class="line">cout&lt;&lt; &quot;Beginning execution of main()&quot;;  </span><br><span class="line">#else </span><br><span class="line">cout&lt;&lt;&quot;error&quot;&lt;&lt;endl;</span><br><span class="line">#endif   </span><br><span class="line">return 0;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;来源&quot;&gt;&lt;a href=&quot;#来源&quot; class=&quot;headerlink&quot; title=&quot;来源&quot;&gt;&lt;/a&gt;来源&lt;/h2&gt;&lt;p&gt;c++中经常看到这样的代码，主要作用是调试的时候，选择性的显示一些内容&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>人工神经网络</title>
@@ -441,28 +461,6 @@
     
     
       <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Avatar</title>
-    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/03/Avatar/"/>
-    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/03/Avatar/</id>
-    <published>2018-04-03T15:01:56.000Z</published>
-    <updated>2018-08-30T02:19:15.736Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://p6hlch5jf.bkt.clouddn.com/avatar%281%29.jpg" alt=""></p><blockquote><p>蓝色的星球—潘多拉<br>梦中的世界—阿凡达<br>同样的蔚蓝，同样的翠色，充满野性的山，奇异魅惑的动物植物，充满希望，充满光芒······<br><a id="more"></a></p></blockquote><p>初中时第一次看这部电影，当时在电视上看到，翻译是《阿凡达》，让我联想到了阿凡提，因此没勾起兴趣，后来一次单独从开头看，完全被它的异域景致所折服，从头看到尾，绚丽的画面将我深深吸引。</p><p>从那时起，我便开始搜寻它的简介，了解它的历史。</p><p>潘多拉，美丽与灾难的代名词，为了资源，人类大肆开垦掠夺。外星的精彩，在人类的蹂躏下，那里将又会是一片火海。</p><p>我最喜欢电影里的自由，无拘无束，山、瀑、林、兽、无边无际，峭奇瑰丽。<br><img src="http://p6hlch5jf.bkt.clouddn.com/avatar%2811%29.png" alt="悬浮山"></p><p>夜晚的潘多拉，更是梦的天堂，荧光的植物，惊艳无比<br><img src="http://p6hlch5jf.bkt.clouddn.com/avatar%288%29.png" alt="夜幕下的植被"></p><p>天空，更是另一片天堂<br><img src="http://p6hlch5jf.bkt.clouddn.com/avatar%28sky%29.png" alt="天空"></p><p>当然，爱情也是必不可少的元素<br><img src="http://p6hlch5jf.bkt.clouddn.com/avatar%287%29.jpg" alt="爱情"></p><blockquote><p>活的如此自由</p><p>属于大地</p><p>属于天空</p><p>浸入心脾的满足</p><p>也便无憾</p></blockquote><p>这里插入电影的<strong>MV《I see you》</strong></p><iframe height="300" width="350" src="http://music.163.com/m/mv?id=31674&userid=590854430" frameborder="0" allowfullscreen><br><br></iframe> <p>————————————————————————更2018.7.9————————————————————————————<br>昨天又温习了一遍阿凡达，还是震撼人心，又看到了许多细节，虽然是虚幻，但又显得如此真实。</p><p>该反抗的时候必须要反抗，不反抗，对方只会得寸进尺，不会有丝毫同情，世界很残酷，需要用强大的内心去战胜。改变都是有所牺牲的，无论如何，有得有失。</p><p>既然选择了，就一次做好，尽自己最大的努力，人生没有给你第二次重来的机会，把握好，只此一次。<br>———————————————————————–更2018.8.23————————————————————————————<br>这次是带着思维去理解这部电影，理解另一种文化，其实是想通过电影练习口语，感觉不错，需要检验。最大的感悟，越文明，越复杂，内心世界的情绪波动更难以捉摸，不知道哪一次的蝴蝶扇动，引起了情绪的爆<br>发。相比之下，Navi族的人更纯净，快乐和悲伤是那么显而易见，这样的生活不需要考虑太多，展现真实的自己就够了，随心即可，享受无边的自由。</p><p>每个人都有自己的目的，没有高低贵贱，只有迫不得已，看待问题，不看对错，只审利弊。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://p6hlch5jf.bkt.clouddn.com/avatar%281%29.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;蓝色的星球—潘多拉&lt;br&gt;梦中的世界—阿凡达&lt;br&gt;同样的蔚蓝，同样的翠色，充满野性的山，奇异魅惑的动物植物，充满希望，充满光芒······&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
