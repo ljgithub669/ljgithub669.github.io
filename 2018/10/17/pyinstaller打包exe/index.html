@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg">
-  <title>linux基础命令 | Aspire</title>
+  <title>pyinstaller打包exe | Aspire</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、文件操作和权限管理1.只有root能执行的命令，在/sbin或/usr/sbin下（sbinsuper binary） 2.所有用户：在/bin或/usr/bin下">
+  <meta name="description" content="reference 一、来源使用Python时，有时候需要在没有安装python及其包的电脑上运行，这样就十分麻烦。因此，Python有一个工具—-pyinstaller，可以将Python程序打包成exe文件，双击即可运行。">
 <meta name="keywords" content="技术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux基础命令">
-<meta property="og:url" content="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/19/linux基础命令/index.html">
+<meta property="og:title" content="pyinstaller打包exe">
+<meta property="og:url" content="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/10/17/pyinstaller打包exe/index.html">
 <meta property="og:site_name" content="Aspire">
-<meta property="og:description" content="一、文件操作和权限管理1.只有root能执行的命令，在/sbin或/usr/sbin下（sbinsuper binary） 2.所有用户：在/bin或/usr/bin下">
+<meta property="og:description" content="reference 一、来源使用Python时，有时候需要在没有安装python及其包的电脑上运行，这样就十分麻烦。因此，Python有一个工具—-pyinstaller，可以将Python程序打包成exe文件，双击即可运行。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-20T16:52:57.397Z">
+<meta property="og:updated_time" content="2018-10-17T12:58:40.914Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux基础命令">
-<meta name="twitter:description" content="一、文件操作和权限管理1.只有root能执行的命令，在/sbin或/usr/sbin下（sbinsuper binary） 2.所有用户：在/bin或/usr/bin下">
+<meta name="twitter:title" content="pyinstaller打包exe">
+<meta name="twitter:description" content="reference 一、来源使用Python时，有时候需要在没有安装python及其包的电脑上运行，这样就十分麻烦。因此，Python有一个工具—-pyinstaller，可以将Python程序打包成exe文件，双击即可运行。">
   
     <link rel="alternative" href="/atom.xml" title="Aspire" type="application/atom+xml">
   
@@ -159,191 +159,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-linux基础命令" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-pyinstaller打包exe" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      linux基础命令
+      pyinstaller打包exe
     </h1>
   
 
         
-        <a href="/2018/04/19/linux基础命令/" class="archive-article-date">
-  	<time datetime="2018-04-19T04:43:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-19</time>
+        <a href="/2018/10/17/pyinstaller打包exe/" class="archive-article-date">
+  	<time datetime="2018-10-17T12:45:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、文件操作和权限管理"><a href="#一、文件操作和权限管理" class="headerlink" title="一、文件操作和权限管理"></a>一、文件操作和权限管理</h2><p>1.只有root能执行的命令，在/sbin或/usr/sbin下（sbinsuper binary）</p>
-<p>2.所有用户：在/bin或/usr/bin下<br><a id="more"></a><br>3.<code>drwxr-xr-x 22</code></p>
-<p><code>d</code> 表示目录</p>
-<p><code>-</code>表示二进制文件</p>
-<p><code>l</code>表示软件链接文件link</p>
-<p><code>22</code> 表示硬链接个数</p>
-<p>4.<code>cd</code>意思是change directory</p>
-<p>5.<code>pwd</code>意思是 print working directory</p>
-<p>6.<code>cp -R</code>可以复制目录</p>
-<p>7.<code>ctrl+c</code>终止命令</p>
-<p>8.<code>mv</code>移动文件、改名</p>
-<p>9.<code>head -20 /etc/name</code> 查看前20行</p>
-<p>10.<code>tail -15 /etc/name</code> 查看后几行</p>
-<p>11.软链接—&gt;类似于快捷方式图标</p>
-<p><code>ln -s /name /newname</code>创建软连接</p>
-<p>12.硬链接（不能跨分区生成链接）</p>
-<p>没有s，功能比cp强大，可以同步更新比如<code>ln /name /newname</code></p>
-<p>13.<code>ls -i</code>(inode)</p>
-<p>查看文件i节点，文件唯一数字标志，但一个i节点可对应多个文件，比如硬链接  </p>
-<p>14.权限处理命令</p>
-<pre><code>chmod
-          u + r
-
-          g - w
-
-          o = x
-</code></pre><p><code>u</code>   使用者</p>
-<p><code>g</code>   群组</p>
-<p><code>o</code>   其他人</p>
-<p>15.<code>chmod 755 filename</code></p>
-<p>16.<code>su - lijie</code>切换用户</p>
-<p>17.改变文件所有者</p>
-<p>chown 用户名 文件名</p>
-<ol>
-<li>添加用户</li>
-</ol>
-<p><code>useradd lijie</code></p>
-<p><code>passwd 11111111</code></p>
-<p>19.<code>chgrp 用户名 文件名</code>改变所属组</p>
-<p>20.设置默认权限</p>
-<p><code>umask -S（大写）</code>查看默认权限</p>
-<p>更改：<code>umask 权限掩码</code>（比如025，实际是777-025=752）</p>
-<h2 id="二、文件查找"><a href="#二、文件查找" class="headerlink" title="二、文件查找"></a>二、文件查找</h2><p>1.which 命令</p>
-<p>查看命令的绝对路径</p>
-<p>2.whereis 命令</p>
-<p>可以找到文件路径和帮助文档所在位置</p>
-<p>3.find 搜素路径 搜索关键字 文件名</p>
-<p><code>find /home -name filename</code></p>
-<p><code>-name</code>  根据文件名查找</p>
-<p><code>\*</code>  匹配任意字符</p>
-<p><code>find /home -name li*</code></p>
-<p><code>？</code> 匹配当字符</p>
-<hr>
-<p><code>find /home -name l????</code></p>
-<p><code>-size</code> 文件大小（block数据块，512字节=0.5KB）</p>
-<p>100M=102400KB=204800block</p>
-<p>大于 +</p>
-<p>小于 —</p>
-<p><code>find /home -size +100</code></p>
-<hr>
-<p><code>-user</code> 文件所有者</p>
-<p><code>find /home -user 用户名（root）</code></p>
-<hr>
-<p>时间值</p>
-<p>以天为单位 <code>ctime atime mtime</code></p>
-<p>分钟  <code>cmin amin mmin</code> </p>
-<p><code>c</code>  change(文件属性被改变过）</p>
-<p><code>a</code>  access（被访问过）</p>
-<p><code>m</code>  modify(被修改过)</p>
-<p><code>find /home -mmin -120</code></p>
-<p><code>-a</code> (and)</p>
-<p><code>-o</code> (or)</p>
-<hr>
-<p><code>-type</code> 文件类型</p>
-<p> <code>f</code> 二进制文件</p>
-<p><code>l</code> 软连接文件</p>
-<p><code>d</code> 目录</p>
-<p><code>find /home -type d</code></p>
-<p><code>find /home -type d -o -name li???</code></p>
-<p><code>find /home -type d -exec ls -l {}\;</code><br>查看文件详细信息</p>
-<p>删除特殊文件名：<code>rm -rf &quot;a b&quot;</code></p>
-<p>或者<code>find . inum 156 -exec rm {} \;</code></p>
-<hr>
-<p>locate file</p>
-<p><code>grep 关键词 路径</code></p>
-<hr>
-<p><code>man</code> 命令（help）</p>
-<p><code>info</code> 命令（类似man）</p>
-<p><code>whatis ls</code></p>
-<h1 id="三、压缩包"><a href="#三、压缩包" class="headerlink" title="三、压缩包"></a>三、压缩包</h1><ol>
-<li>命令名称：<code>gzip 文件名</code></li>
-</ol>
-<p>只能压缩文件，并且不保留原文件</p>
-<ol>
-<li>解压</li>
-</ol>
-<p><code>gunzip 文件名</code></p>
-<p><code>gzip -d 文件名</code></p>
-<p>3.<code>tar</code>:把目录打包成文件</p>
-<p><code>-c</code> 产生.tar打包文件</p>
-<p><code>-z</code> 打包同时压缩</p>
-<p><code>-f</code> 指定压缩后的文件名</p>
-<p><code>-v</code> 显示详细信息</p>
-<p><code>tar -zcvf newname oldname</code></p>
-<p><code>file 文件名</code>:查看文件属性，判断是不是压缩包</p>
-<hr>
-<p>可压缩目录<br><code>zip -r test.zip test(保存源文件)</code></p>
-<p><code>unzip</code>:解压</p>
-<hr>
-<p><code>.bz2(-k保留原文件)</code></p>
-<p>压缩:<code>bzip2 nnew.bz2 new</code></p>
-<p>解压:<code>bunzip2</code></p>
-<hr>
-<p>3.<code>write</code>可通讯</p>
-<pre><code>write lijie  
-
-这里可以直接写内容
-</code></pre><p><code>ctrl+d</code>结束</p>
-<hr>
-<p><code>wall(write all 写给所有人)</code></p>
-<hr>
-<p><code>ping 192.168.137.1</code></p>
-<p><code>ping -s 5220 ip</code>；发包</p>
-<p><code>ping -c 6(显示次数) ip</code></p>
-<hr>
-<p>shell应用</p>
-<p>bash</p>
-<p><code>clear=ctrl+l</code></p>
-<p><code>ctrl+u</code>(删除之前的命令)</p>
-<hr>
-<p>命令定义别名</p>
-<p><code>alias new=old</code></p>
-<p><code>alise drm=&quot;rm -rf&quot;</code></p>
-<p>删除别名:<code>unalise</code></p>
-<hr>
-<h1 id="四、输入输出重定向-0输入，1输出，2出错信息"><a href="#四、输入输出重定向-0输入，1输出，2出错信息" class="headerlink" title="四、输入输出重定向(0输入，1输出，2出错信息)"></a>四、输入输出重定向(0输入，1输出，2出错信息)</h1><p>输出：<code>ls -l /home &gt; /home/log</code></p>
-<p>还可以追加:<code>ls -l /home &gt;&gt; /home/log</code></p>
-<p>输入：<code>wall &lt; /home/log</code></p>
-<hr>
-<p>管道（|）：将一个命令的输出传送给另一个命令，作为另一个命令的输入。</p>
-<p><code>命令1 | 命令2 | 命令n</code></p>
-<p><code>ls -l /etc | more</code></p>
-<p><code>ls -l /etc | grep init</code></p>
-<p><code>ls -l /etc | grep init | wc -l</code></p>
-<hr>
-<p>命令连接符；</p>
-<p><code>ls;date;pwd</code></p>
-<p>逻辑与</p>
-<pre><code>命令1 &amp;&amp; 命令2
-
- √          √
-
- ×          ×
-</code></pre><p><code>ls &amp;&amp; pwd</code></p>
-<p>逻辑或（类似非）  ||</p>
-<pre><code>命令1 || 命令2
-
- ×          √
-
- √          ×
-</code></pre><hr>
-<p>命令替换符： 命令1 `命令2`</p>
-<p>将一个命令的输出作为另一个命令的参数</p>
-<p>ls -l `which touch`</p>
-<hr>
+        <p><a href="https://www.jianshu.com/p/7de585b18792" target="_blank" rel="noopener">reference</a></p>
+<h2 id="一、来源"><a href="#一、来源" class="headerlink" title="一、来源"></a>一、来源</h2><p>使用Python时，有时候需要在没有安装python及其包的电脑上运行，这样就十分麻烦。因此，Python有一个工具—-pyinstaller，可以将Python程序打包成exe文件，双击即可运行。</p>
+<a id="more"></a>
+<h2 id="二、使用"><a href="#二、使用" class="headerlink" title="二、使用."></a>二、使用.</h2><p>一行代码,不过运行时间有点长，大概半分钟，结果在dist文件夹下</p>
+<p><code>pyinstaller -F name.py</code></p>
 
       
 
@@ -444,7 +284,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/19/linux基础命令/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/10/17/pyinstaller打包exe/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -458,18 +298,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/19/Vim/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Vim
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/04/14/Tensorflow学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Tensorflow学习笔记</div>
+    <a href="/2018/10/13/ifdef用法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ifdef用法</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -496,7 +327,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、文件操作和权限管理"><span class="toc-number">1.</span> <span class="toc-text">一、文件操作和权限管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、文件查找"><span class="toc-number">2.</span> <span class="toc-text">二、文件查找</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、压缩包"><span class="toc-number"></span> <span class="toc-text">三、压缩包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、输入输出重定向-0输入，1输出，2出错信息"><span class="toc-number"></span> <span class="toc-text">四、输入输出重定向(0输入，1输出，2出错信息)</span></a>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、来源"><span class="toc-number">1.</span> <span class="toc-text">一、来源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、使用"><span class="toc-number">2.</span> <span class="toc-text">二、使用.</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -512,7 +343,7 @@
   
 
   
-  <div id="SOHUCS" sid="linux基础命令" ></div> 
+  <div id="SOHUCS" sid="pyinstaller打包exe" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/"/>
-  <updated>2018-10-12T16:22:30.152Z</updated>
+  <updated>2018-10-17T12:58:40.914Z</updated>
   <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pyinstaller打包exe</title>
+    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/10/17/pyinstaller%E6%89%93%E5%8C%85exe/"/>
+    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/10/17/pyinstaller打包exe/</id>
+    <published>2018-10-17T12:45:27.000Z</published>
+    <updated>2018-10-17T12:58:40.914Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="https://www.jianshu.com/p/7de585b18792" target="_blank" rel="noopener">reference</a></p><h2 id="一、来源"><a href="#一、来源" class="headerlink" title="一、来源"></a>一、来源</h2><p>使用Python时，有时候需要在没有安装python及其包的电脑上运行，这样就十分麻烦。因此，Python有一个工具—-pyinstaller，可以将Python程序打包成exe文件，双击即可运行。</p><a id="more"></a><h2 id="二、使用"><a href="#二、使用" class="headerlink" title="二、使用."></a>二、使用.</h2><p>一行代码,不过运行时间有点长，大概半分钟，结果在dist文件夹下</p><p><code>pyinstaller -F name.py</code></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/7de585b18792&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;reference&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;一、来源&quot;&gt;&lt;a href=&quot;#一、来源&quot; class=&quot;headerlink&quot; title=&quot;一、来源&quot;&gt;&lt;/a&gt;一、来源&lt;/h2&gt;&lt;p&gt;使用Python时，有时候需要在没有安装python及其包的电脑上运行，这样就十分麻烦。因此，Python有一个工具—-pyinstaller，可以将Python程序打包成exe文件，双击即可运行。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>ifdef用法</title>
@@ -428,34 +449,6 @@
 &lt;blockquote&gt;
 &lt;p&gt;当我们用C/C++写程序时，头文件引用每次都会用到&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;&lt;/code&gt;或&lt;code&gt;#include &amp;lt;iostream&amp;gt;&lt;/code&gt;，并且这个头文件还放在编译软件内部，需要自己去找，一般放在include包含头文件的地方。&lt;/p&gt;
 &lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>argc和argv</title>
-    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/05/argc%E5%92%8Cargv/"/>
-    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/04/05/argc和argv/</id>
-    <published>2018-04-04T16:12:54.000Z</published>
-    <updated>2018-07-31T12:04:55.131Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>基于此文章：<a href="http://mp.weixin.qq.com/s/l3WgCfgQUjv2hyuqD-BScg" target="_blank" rel="noopener">探究argc与argv的鱼与渔</a></p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="0" height="0" src="http://music.163.com/m/song?id=496774187&userid=590854430"><br></iframe> <h2 id="一、含义解读"><a href="#一、含义解读" class="headerlink" title="一、含义解读"></a>一、含义解读</h2><ul><li><p><strong>argc:</strong>读作arg C,是argument counter的缩写，意思是参数计数器。</p></li><li><p><strong>argv:</strong>读作arg V，是argument vector的缩写，vector是数组的意思，合起来意思是参数组成的数组。</p></li></ul><a id="more"></a><h2 id="二、来源"><a href="#二、来源" class="headerlink" title="二、来源"></a>二、来源</h2><ul><li>出现在C/C++里，在<code>int main(int argc,char *argv[])</code>里。</li><li>python中也有出现</li></ul><h2 id="三、用法"><a href="#三、用法" class="headerlink" title="三、用法"></a>三、用法</h2><p>1.使用时需要用到命令行，即输入<code>.exe</code>文件，空格，参数。例如：<code>a.exe kk5 21ao 深度</code>,内容可以随便输入。</p><p>2.具体操作：</p><blockquote><blockquote><blockquote><p>编辑代码</p></blockquote></blockquote></blockquote><blockquote><blockquote><p>g++编译</p></blockquote><p>命令行运行</p></blockquote><p>3.代码如下：</p><pre><code>#include&lt;iostream&gt;using namespace std;    int main(int argc,char *argv[]){    cout&lt;&lt;&quot;argc is: &quot;&lt;&lt;argc&lt;&lt;endl;                 //A    for(int i=0;i&lt;argc;i++)    {        cout&lt;&lt;&quot;argv[&quot;&lt;&lt;i&lt;&lt;&quot;]=&quot;&lt;&lt;argv[i]&lt;&lt;endl;     //B    }return 0;}</code></pre><p>名称命名为<code>argc.cpp</code>，A输出结果为输入字符串的个数，B输出结果为每个字符串的单独显示。</p><p>四、运行过程的图片</p><p><img src="http://p6hlch5jf.bkt.clouddn.com/argc_argv.png" alt=""></p><p>我用gcc编译会报错，但gcc编译c语言没问题，所以就用了g++。</p><p>————-更2018.7.31————–<br>补充<code>char ** argv</code>读取指定图片</p><pre><code>#include&lt;iostream&gt;#include&lt;opencv2/opencv.hpp&gt;using namespace cv;int main(int argc,char ** argv){    Mat img = imread(argv[1]);        imshow(&quot;图片&quot;,img);    waitKey(0);    system(&quot;pause&quot;);    return 0;}</code></pre><p>命令行输入<code>*.exe 1.jpg</code>即可打开图片<br><img src="1.png" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;基于此文章：&lt;a href=&quot;http://mp.weixin.qq.com/s/l3WgCfgQUjv2hyuqD-BScg&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;探究argc与argv的鱼与渔&lt;/a&gt;&lt;/p&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;0&quot; height=&quot;0&quot; src=&quot;http://music.163.com/m/song?id=496774187&amp;userid=590854430&quot;&gt;&lt;br&gt;&lt;/iframe&gt; 
-
-&lt;h2 id=&quot;一、含义解读&quot;&gt;&lt;a href=&quot;#一、含义解读&quot; class=&quot;headerlink&quot; title=&quot;一、含义解读&quot;&gt;&lt;/a&gt;一、含义解读&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;argc:&lt;/strong&gt;读作arg C,是argument counter的缩写，意思是参数计数器。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;argv:&lt;/strong&gt;读作arg V，是argument vector的缩写，vector是数组的意思，合起来意思是参数组成的数组。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
     
     </summary>
     
