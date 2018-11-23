@@ -187,14 +187,9 @@
       
         <h2 id="一、用途"><a href="#一、用途" class="headerlink" title="一、用途"></a>一、用途</h2><p>cmake是一个将所有c、h、lib等文件相互联系的框架，通过make命令，便可对代码进行编译。</p>
 <p><strong>优点</strong>：跨平台</p>
-<h2 id="二、单个文件使用"><a href="#二、单个文件使用" class="headerlink" title="二、单个文件使用"></a>二、单个文件使用</h2><p>操作流程：<br><img src="http://phivmw7vl.bkt.clouddn.com/cmake%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.png" alt=""></p>
-<p>CMakeLists.txt内容<br><img src="http://phivmw7vl.bkt.clouddn.com/CMakeList.png" alt="CMakeLists.txt内容"></p>
-<p>命令执行：<br><img src="http://phivmw7vl.bkt.clouddn.com/cmake.png" alt=""></p>
-<h2 id="三、多个文件"><a href="#三、多个文件" class="headerlink" title="三、多个文件"></a>三、多个文件</h2><p>文件目录：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|---src</span><br><span class="line">|     |---for_while.c</span><br><span class="line">|     |---for_while.h</span><br><span class="line">|---CMakeLists.txt</span><br><span class="line">|---main.c</span><br></pre></td></tr></table></figure>
-<p>CMakeLists.txt内容<br><img src="http://phivmw7vl.bkt.clouddn.com/%E9%93%BE%E6%8E%A5.png" alt=""></p>
-<p>将中间文件生成在build目录下<br><img src="http://phivmw7vl.bkt.clouddn.com/cmake_build.png" alt=""></p>
-
+        
+          <a class="article-more-a" href="/2018/11/24/CMake应用/#more">more >></a>
+        
       
 
       
@@ -451,15 +446,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>在校园中，经常会出现证件丢失的情况，例如身份证、学生证、一卡通，而学校人多，仅凭卡片上仅有的信息一般是找不到失主的，除非正好认识失主。另一种常用的解决方案，就是通过类似于小喇叭的公众号发布招领信息，等待失主去找。还有一种线下方式，就是放在丢失的地方，等失主认领，这种方法经常造成食堂、图书馆堆积大量丢失证件，无人认领，为此，我们想到了这个解决方案。当捡到一张丢失的证件，用手机或电脑采集好证件正面图片，通过我们的系统，识别出人脸的主人是谁，辅助方案是识别文字，以此提高系统的准确度（方案的前提是拥有学校所有学生信息，这个已经和相关老师商量好了，可以提供数据库），当获取失主的信息后，就有了联系方式，然后后台自动给失主发送招领信息，注明时间地点，省时省力。</p>
-<p>校园图书馆、食堂等公共场合，经常会出现这种情况：<br><img src="http://phivmw7vl.bkt.clouddn.com/P81123-123259%281%29.jpg" alt=""></p>
-<h2 id="二、系统设计"><a href="#二、系统设计" class="headerlink" title="二、系统设计"></a>二、系统设计</h2><p>1.事先获得学校所有学生证件的头像及联系方式（已和相关老师协商好，可以提供），训练数据库模型</p>
-<p>2.通过人脸识别程序，检测出丢失证件的所有者，并通过数据库返回联系方式</p>
-<p>3.通过自动发送邮件程序，将证件招领信息发给失主，等待认领</p>
-<p>代码目录结构：<br><img src="http://phivmw7vl.bkt.clouddn.com/list.png" alt=""></p>
-<h2 id="三、结果展示"><a href="#三、结果展示" class="headerlink" title="三、结果展示"></a>三、结果展示</h2><p>经测试，每个样本至少需要200张照片，这样才能保证精度。下图为代码执行结果<br><img src="http://phivmw7vl.bkt.clouddn.com/daima.png" alt=""></p>
-<p>邮件发送成功：<br><img src="http://phivmw7vl.bkt.clouddn.com/youjian.jpg" alt=""></p>
-<h2 id="四、待完善"><a href="#四、待完善" class="headerlink" title="四、待完善"></a>四、待完善</h2><p>由于只是一个雏形，所以没有一个有好的交互界面，操作起来不方便，还需努力</p>
-
+        
+          <a class="article-more-a" href="/2018/10/29/校园丢失证件查找失主系统/#more">more >></a>
+        
       
 
       
