@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/"/>
-  <updated>2019-03-30T02:56:35.713Z</updated>
+  <updated>2019-03-30T03:10:17.998Z</updated>
   <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/03/30/linux%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
     <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/03/30/linux常用操作/</id>
     <published>2019-03-30T02:44:28.000Z</published>
-    <updated>2019-03-30T02:56:35.713Z</updated>
+    <updated>2019-03-30T03:10:17.998Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="1-配置环境"><a href="#1-配置环境" class="headerlink" title="1. 配置环境"></a>1. 配置环境</h2><p>通常使用<code>pip install tensorflow-gpu==1.11.0</code>直接下载对应版本</p><p>当有<code>requirements.txt</code>文件时，直接使用<code>pip install -r ./requirements.txt</code>进行下载</p><h2 id="2-压缩打包"><a href="#2-压缩打包" class="headerlink" title="2. 压缩打包"></a>2. 压缩打包</h2><p><strong>压缩文件：</strong><code>tar -zcvf tensor.tar.gz tensorflow-yolov3/</code></p><p>从服务器将文件下载至本机：<code>sz tensor.tar.gz</code></p><p><strong>解压缩：</strong><code>unrar e CASIA2.rar ./CASIA2</code></p><h2 id="3-查看文件数目"><a href="#3-查看文件数目" class="headerlink" title="3. 查看文件数目"></a>3. 查看文件数目</h2><p><code>ls CASIA2 | wc -l</code></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="1-配置环境"><a href="#1-配置环境" class="headerlink" title="1. 配置环境"></a>1. 配置环境</h2><p>通常使用<code>pip install tensorflow-gpu==1.11.0</code>直接下载对应版本</p><p>当有<code>requirements.txt</code>文件时，直接使用<code>pip install -r ./requirements.txt</code>进行下载</p><h2 id="2-压缩打包"><a href="#2-压缩打包" class="headerlink" title="2. 压缩打包"></a>2. 压缩打包</h2><p><strong>压缩文件：</strong><code>tar -zcvf tensor.tar.gz tensorflow-yolov3/</code></p><p>从服务器将文件下载至本机：<code>sz tensor.tar.gz</code></p><p><strong>解压缩：</strong><code>unrar e CASIA2.rar ./CASIA2</code></p><h2 id="3-查看文件数目"><a href="#3-查看文件数目" class="headerlink" title="3. 查看文件数目"></a>3. 查看文件数目</h2><p><code>ls CASIA2 | wc -l</code></p><p><strong>解释：</strong><br>|—-|—-|<br>|wc -c|字节数|<br>|wc -l|行数|<br>|wc file|行数 单词数 字节 file|</p>]]></content>
     
     <summary type="html">
     
