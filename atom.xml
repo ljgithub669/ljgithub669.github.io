@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/"/>
-  <updated>2019-04-04T16:19:15.097Z</updated>
+  <updated>2019-04-07T16:11:41.987Z</updated>
   <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>socket通信</title>
+    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/04/07/socket%E9%80%9A%E4%BF%A1/"/>
+    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/04/07/socket通信/</id>
+    <published>2019-04-07T07:45:13.000Z</published>
+    <updated>2019-04-07T16:11:41.987Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一、背景介绍"><a href="#一、背景介绍" class="headerlink" title="一、背景介绍"></a>一、背景介绍</h2><p>socket可以在两个设备之间传输文件，一个服务端、一个客户端，相互之间可以双向通信，前提条件是两者需要在同一网络下。</p><a id="more"></a><h2 id="二、传输文字"><a href="#二、传输文字" class="headerlink" title="二、传输文字"></a>二、传输文字</h2><p><strong>注意事项：</strong>在本机传输和接收数据时，可以直接使用127.0.0.1（本机默认IP）和0.0.0.0（初始IP），如果不同电脑间传输，则需要用<code>ipconfig</code>或<code>ifconfig</code>查询本机IP，端口号自定义，一般大于10000，防止和本机其他占用。</p><p>‘’’</p><pre><code>#server.pyimport socketimport sys# 创建 socket 对象serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # 获取本地主机名host = socket.gethostname()port = 10999# 绑定端口号serversocket.bind((host, port))# 设置最大连接数，超过后排队serversocket.listen(5)while True:    # 建立客户端连接    clientsocket,addr = serversocket.accept()          print(&quot;连接地址: %s&quot; % str(addr))    msg=&apos;欢迎访问菜鸟教程！&apos;+ &quot;\r\n&quot;    clientsocket.send(msg.encode(&apos;utf-8&apos;))    clientsocket.close()</code></pre><p>‘’’</p><p>‘’’</p><pre><code>#client.pyimport socketimport sys# 创建 socket 对象s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # 获取本地主机名host = socket.gethostname() # 设置端口号port = 10999# 连接服务，指定主机和端口s.connect((host, port))# 接收小于 1024 字节的数据msg = s.recv(1024)#将bytes格式解码显示print (msg.decode(&apos;utf-8&apos;))#客户端需要关闭，不然会造成端口一段时间不能使用s.close()</code></pre><p>‘’’</p><p><img src="https://s2.ax1x.com/2019/04/08/A4n4cq.png" alt="A4n4cq.png"></p><h2 id="三、传图片"><a href="#三、传图片" class="headerlink" title="三、传图片"></a>三、传图片</h2><p>###服务器端server.py</p><p>‘’’</p><pre><code>###服务器端server.pyimport socketimport osimport sysimport structdef socket_service_image():    try:        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)        s.bind((&apos;0.0.0.0&apos;, 11111))        #s.bind((&apos;服务器的ip&apos;, 6666))        s.listen(10)    except socket.error as msg:        print(msg)        sys.exit(1)    print(&quot;Wait for Connection.....................&quot;)    while True:        sock, addr = s.accept()  #addr是一个元组(ip,port)        deal_image(sock, addr)def deal_image(sock, addr):    print(&quot;Accept connection from {0}&quot;.format(addr))  #查看发送端的ip和端口    while True:        fileinfo_size = struct.calcsize(&apos;128sq&apos;)        buf = sock.recv(fileinfo_size)   #接收图片名        if buf:            filename, filesize = struct.unpack(&apos;128sq&apos;, buf)            fn = filename.decode().strip(&apos;\x00&apos;)            new_filename = os.path.join(&apos;./&apos;, &apos;receive_&apos; + fn)  #在服务器端新建图片名（可以不用新建的，直接用原来的也行，只要客户端和服务器不是同一个系统或接收到的图片和原图片不在一个文件夹下）            recvd_size = 0            fp = open(new_filename, &apos;wb&apos;)            while not recvd_size == filesize:                if filesize - recvd_size &gt; 1024:                    data = sock.recv(1024)                    recvd_size += len(data)                else:                    data = sock.recv(1024)                    recvd_size = filesize                fp.write(data)  #写入图片数据            fp.close()        sock.close()        breakif __name__ == &apos;__main__&apos;:    socket_service_image()</code></pre><p>‘’’</p><p>###客户端client.py</p><p>‘’’</p><pre><code>###客户端client.pyimport socketimport osimport sysimport structdef sock_client_image():    while True:        try:            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)            #s.connect((&apos;服务器的ip&apos;, 6666))  #服务器和客户端在不同的系统或不同的主机下时使用的ip和端口，首先要查看服务器所在的系统网卡的ip            s.connect((&apos;192.168.133.128&apos;, 31500))  #服务器和客户端都在一个系统下时使用的ip和端口        except socket.error as msg:            print(msg)            print(sys.exit(1))        #filepath = input(&quot;lijie.jpg&quot;)   #输入当前目录下的图片名 xxx.jpg        #send第一张        filepath = &quot;1.jpg&quot;        fhead = struct.pack(b&apos;128sq&apos;, bytes(os.path.basename(filepath), encoding=&apos;utf-8&apos;), os.stat(filepath).st_size)  #将xxx.jpg以128sq的格式打包        s.send(fhead)        fp = open(filepath, &apos;rb&apos;)  #打开要传输的图片        while True:            data = fp.read(1024) #读入图片数据            if not data:                print(&apos;{0} send over...&apos;.format(filepath))                break            s.send(data)  #以二进制格式发送图片数据        s.close()        break    #循环发送if __name__ == &apos;__main__&apos;:    sock_client_image()</code></pre><p>‘’’</p><p><img src="https://s2.ax1x.com/2019/04/08/A4nh3n.png" alt="A4nh3n.png"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;一、背景介绍&quot;&gt;&lt;a href=&quot;#一、背景介绍&quot; class=&quot;headerlink&quot; title=&quot;一、背景介绍&quot;&gt;&lt;/a&gt;一、背景介绍&lt;/h2&gt;&lt;p&gt;socket可以在两个设备之间传输文件，一个服务端、一个客户端，相互之间可以双向通信，前提条件是两者需要在同一网络下。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>我弄丢了自己最珍贵的东西</title>
@@ -406,27 +426,6 @@
     
     
       <category term="随笔" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>别古</title>
-    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/06/12/%E5%88%AB%E5%8F%A4/"/>
-    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/06/12/别古/</id>
-    <published>2018-06-12T14:19:56.000Z</published>
-    <updated>2018-11-01T08:29:31.826Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>简介稍后补充</p><p><img src="http://phivmw7vl.bkt.clouddn.com/biegu.jpg" alt=""></p><a id="more"></a><p>暂时设计为按国家分类，主要看的是美国科幻、韩国和日本的爱情电影。韩国主要是爱情电影，爱的太深刻、太感人！<br>感悟稍后有时间补上。</p><h2 id="1-韩国"><a href="#1-韩国" class="headerlink" title="1.韩国"></a>1.韩国</h2><p>《狼少年》</p><blockquote><p>只能用纯洁来形容，另外，男女主所站角度不同，化用一句，男主被驯养了</p></blockquote><p>《脑中的橡皮擦》</p><p>《太阳的后裔》</p><p>《假如爱有天意》</p><p>《热血青春》</p><p>《只有你》</p><p>《现在去见你》</p><p>《孤胆特工》</p><blockquote><p>青春，朦胧</p></blockquote><p>《那小子真帅》</p><blockquote><p>没看到结局时，觉得女主怎么那么幸运。看到结局，才发现是种子发芽了。</p></blockquote><p>《马粥街残酷史》</p><blockquote><p>青春的冲动与对学校生活的反抗</p></blockquote><h2 id="2-日本"><a href="#2-日本" class="headerlink" title="2.日本"></a>2.日本</h2><p>《在世界中心呼唤爱》</p><p>《寄生兽》</p><h2 id="3-美国"><a href="#3-美国" class="headerlink" title="3.美国"></a>3.美国</h2><p><strong>科幻</strong><br>《阿凡达》</p><p>《美国队长系列》</p><p>《钢铁侠系列》</p><p>《蜘蛛侠系列》（三个版本）</p><p>《黑衣人系列》</p><p>《异形系列》</p><p>《复仇者联盟系列》</p><p>《绿巨人系列》</p><p>《终结者系列》</p><p>《金刚狼系列》</p><p>《雷神系列》</p><p>《普罗米修斯》</p><p><strong>爱情</strong></p><p>《泰坦尼克号》</p><p>《两小无猜》</p><p>《怦然心动》</p><p><strong>励志</strong></p><p>《当幸福来敲门》</p><p>《阿甘正传》</p><h2 id="4-国内"><a href="#4-国内" class="headerlink" title="4.国内"></a>4.国内</h2><p>《月光宝盒》</p><p>《神话》</p><p>《活着》</p><p>《早熟》</p><p>《咱们结婚吧》</p><p>《一九四二》</p><p>《听说》</p><p>《不能说的秘密》</p><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>《初恋这件小事》</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;简介稍后补充&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://phivmw7vl.bkt.clouddn.com/biegu.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="生活" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
