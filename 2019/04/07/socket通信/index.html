@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s2.ax1x.com/2019/04/08/A4n4cq.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/04/08/A4nh3n.png">
-<meta property="og:updated_time" content="2019-04-07T16:11:41.987Z">
+<meta property="og:updated_time" content="2019-04-07T16:15:43.266Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="socket通信">
 <meta name="twitter:description" content="一、背景介绍socket可以在两个设备之间传输文件，一个服务端、一个客户端，相互之间可以双向通信，前提条件是两者需要在同一网络下。">
@@ -194,7 +194,6 @@
         <h2 id="一、背景介绍"><a href="#一、背景介绍" class="headerlink" title="一、背景介绍"></a>一、背景介绍</h2><p>socket可以在两个设备之间传输文件，一个服务端、一个客户端，相互之间可以双向通信，前提条件是两者需要在同一网络下。</p>
 <a id="more"></a>
 <h2 id="二、传输文字"><a href="#二、传输文字" class="headerlink" title="二、传输文字"></a>二、传输文字</h2><p><strong>注意事项：</strong>在本机传输和接收数据时，可以直接使用127.0.0.1（本机默认IP）和0.0.0.0（初始IP），如果不同电脑间传输，则需要用<code>ipconfig</code>或<code>ifconfig</code>查询本机IP，端口号自定义，一般大于10000，防止和本机其他占用。</p>
-<p>‘’’</p>
 <pre><code>#server.py
 import socket
 import sys
@@ -219,9 +218,9 @@ while True:
     msg=&apos;欢迎访问菜鸟教程！&apos;+ &quot;\r\n&quot;
     clientsocket.send(msg.encode(&apos;utf-8&apos;))
     clientsocket.close()
-</code></pre><p>‘’’</p>
-<p>‘’’</p>
-<pre><code>#client.py
+
+
+#client.py
 import socket
 import sys
 
@@ -243,10 +242,8 @@ msg = s.recv(1024)
 print (msg.decode(&apos;utf-8&apos;))
 #客户端需要关闭，不然会造成端口一段时间不能使用
 s.close()
-</code></pre><p>‘’’</p>
-<p><img src="https://s2.ax1x.com/2019/04/08/A4n4cq.png" alt="A4n4cq.png"></p>
+</code></pre><p><img src="https://s2.ax1x.com/2019/04/08/A4n4cq.png" alt="A4n4cq.png"></p>
 <h2 id="三、传图片"><a href="#三、传图片" class="headerlink" title="三、传图片"></a>三、传图片</h2><p>###服务器端server.py</p>
-<p>‘’’</p>
 <pre><code>###服务器端server.py
 import socket
 import os
@@ -297,9 +294,7 @@ def deal_image(sock, addr):
 
 if __name__ == &apos;__main__&apos;:
     socket_service_image()
-</code></pre><p>‘’’</p>
-<p>###客户端client.py</p>
-<p>‘’’</p>
+</code></pre><p>###客户端client.py</p>
 <pre><code>###客户端client.py
 import socket
 import os
@@ -333,8 +328,7 @@ def sock_client_image():
 
 if __name__ == &apos;__main__&apos;:
     sock_client_image()
-</code></pre><p>‘’’</p>
-<p><img src="https://s2.ax1x.com/2019/04/08/A4nh3n.png" alt="A4nh3n.png"></p>
+</code></pre><p><img src="https://s2.ax1x.com/2019/04/08/A4nh3n.png" alt="A4nh3n.png"></p>
 
       
 
