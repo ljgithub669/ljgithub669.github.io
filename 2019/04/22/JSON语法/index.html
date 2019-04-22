@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg">
-  <title>Aspire</title>
+  <title>JSON语法 | Aspire</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Aspire">
-<meta property="og:url" content="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/page/2/index.html">
+  <meta name="description" content="一、来源经别人推荐，之前也见过这类数据结构，但不知道什么意思，现在有些理解也就是一个类似数组和字典的东西，为了方便处理JSON字段里的数据。python可以直接import json">
+<meta name="keywords" content="技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSON语法">
+<meta property="og:url" content="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/04/22/JSON语法/index.html">
 <meta property="og:site_name" content="Aspire">
+<meta property="og:description" content="一、来源经别人推荐，之前也见过这类数据结构，但不知道什么意思，现在有些理解也就是一个类似数组和字典的东西，为了方便处理JSON字段里的数据。python可以直接import json">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-22T08:41:23.938Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Aspire">
+<meta name="twitter:title" content="JSON语法">
+<meta name="twitter:description" content="一、来源经别人推荐，之前也见过这类数据结构，但不知道什么意思，现在有些理解也就是一个类似数组和字典的东西，为了方便处理JSON字段里的数据。python可以直接import json">
   
     <link rel="alternative" href="/atom.xml" title="Aspire" type="application/atom+xml">
   
@@ -154,16 +159,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-PyQt5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-JSON语法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/17/PyQt5/">PyQt5</a>
+    <h1 class="article-title" itemprop="name">
+      JSON语法
     </h1>
   
 
@@ -171,26 +174,83 @@
 
 
   <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2019/02/17/PyQt5/" class="pageViews">0</span>次
+      <i class="icon-smile icon"></i> 阅读数:<span id="/2019/04/22/JSON语法/" class="pageViews">0</span>次
   </a>
 
 
 
         
-        <a href="/2019/02/17/PyQt5/" class="archive-article-date">
-  	<time datetime="2019-02-17T13:22:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-17</time>
+        <a href="/2019/04/22/JSON语法/" class="archive-article-date">
+  	<time datetime="2019-04-22T08:03:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、起因"><a href="#一、起因" class="headerlink" title="一、起因"></a>一、起因</h2><p>由于星火杯作品只是一个简单的代码，没有操作界面，给项目本身带来很大的不便，所以决定寒假学习一下，后来经过几天入门，熟悉了基本框架（其实不能叫做熟悉，只能修改别人的代码），最终效果如图</p>
-        
-          <a class="article-more-a" href="/2019/02/17/PyQt5/#more">more >></a>
-        
+        <h2 id="一、来源"><a href="#一、来源" class="headerlink" title="一、来源"></a>一、来源</h2><p>经别人推荐，之前也见过这类数据结构，但不知道什么意思，现在有些理解也就是一个类似数组和字典的东西，为了方便处理JSON字段里的数据。python可以直接import json</p>
+<a id="more"></a>
+<h2 id="二、基本语法"><a href="#二、基本语法" class="headerlink" title="二、基本语法"></a>二、基本语法</h2><pre><code>data=
+{
+
+&quot;name&quot;:&quot;wang&quot;,&quot;age&quot;:&quot;20&quot;
+
+&quot;list&quot;:
+[
+{&quot;name&quot;:&quot;zhao&quot;,&quot;age&quot;:&quot;21&quot;},
+{&quot;name&quot;:&quot;sun&quot;,&quot;age&quot;:&quot;19&quot;},
+{&quot;name&quot;:&quot;chen&quot;,&quot;age&quot;:&quot;20&quot;}
+]
+
+}
+</code></pre><h2 id="三、使用"><a href="#三、使用" class="headerlink" title="三、使用"></a>三、使用</h2><ul>
+<li>json转python数据</li>
+</ul>
+<p>json_str = json.dumps(data)</p>
+<ul>
+<li>python数据转json</li>
+</ul>
+<p>data = json.loads(json_str)</p>
+<ul>
+<li>数据使用</li>
+</ul>
+<p>print(data[“name”])</p>
+<p>print(data[“name”])</p>
+<h2 id="四、未完待续"><a href="#四、未完待续" class="headerlink" title="四、未完待续"></a>四、未完待续</h2><p><a href="http://www.bkjia.com/Pythonjc/1198478.html" target="_blank" rel="noopener">参考链接：</a></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://s2.ax1x.com/2019/02/17/kyNfUK.md.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://s2.ax1x.com/2019/02/17/kyNOVP.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -210,16 +270,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/17/PyQt5/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/04/22/JSON语法/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/07/socket通信/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">socket通信</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -234,360 +353,42 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-CMake应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/24/CMake应用/">CMake应用</a>
-    </h1>
-  
-
-
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/11/24/CMake应用/" class="pageViews">0</span>次
-  </a>
-
-
-
-        
-        <a href="/2018/11/24/CMake应用/" class="archive-article-date">
-  	<time datetime="2018-11-23T16:53:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、用途"><a href="#一、用途" class="headerlink" title="一、用途"></a>一、用途</h2><p>cmake是一个将所有c、h、lib等文件相互联系的框架，通过make命令，便可对代码进行编译。</p>
-<p><strong>优点</strong>：跨平台</p>
-        
-          <a class="article-more-a" href="/2018/11/24/CMake应用/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/24/CMake应用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、来源"><span class="toc-number">1.</span> <span class="toc-text">一、来源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、基本语法"><span class="toc-number">2.</span> <span class="toc-text">二、基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、使用"><span class="toc-number">3.</span> <span class="toc-text">三、使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、未完待续"><span class="toc-number">4.</span> <span class="toc-text">四、未完待续</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-绣春刀" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/17/绣春刀/">绣春刀</a>
-    </h1>
-  
-
-
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/11/17/绣春刀/" class="pageViews">0</span>次
-  </a>
-
-
-
-        
-        <a href="/2018/11/17/绣春刀/" class="archive-article-date">
-  	<time datetime="2018-11-17T03:47:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="0" height="0" src="http://music.163.com/song/574566207/?userid=590854430"><br></iframe> 
-
-<p><img src="https://s1.ax1x.com/2018/12/12/FtJliq.md.png" alt="封面"></p>
-        
-          <a class="article-more-a" href="/2018/11/17/绣春刀/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/17/绣春刀/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-避风" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/29/避风/">避风</a>
-    </h1>
-  
-
-
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/10/29/避风/" class="pageViews">0</span>次
-  </a>
-
-
-
-        
-        <a href="/2018/10/29/避风/" class="archive-article-date">
-  	<time datetime="2018-10-29T05:59:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://phivmw7vl.bkt.clouddn.com/fengpi.jpeg" alt=""></p>
-        
-          <a class="article-more-a" href="/2018/10/29/避风/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/29/避风/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-校园丢失证件查找失主系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/29/校园丢失证件查找失主系统/">校园丢失证件查找失主系统</a>
-    </h1>
-  
-
-
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/10/29/校园丢失证件查找失主系统/" class="pageViews">0</span>次
-  </a>
-
-
-
-        
-        <a href="/2018/10/29/校园丢失证件查找失主系统/" class="archive-article-date">
-  	<time datetime="2018-10-29T05:56:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>在校园中，经常会出现证件丢失的情况，例如身份证、学生证、一卡通，而学校人多，仅凭卡片上仅有的信息一般是找不到失主的，除非正好认识失主。另一种常用的解决方案，就是通过类似于小喇叭的公众号发布招领信息，等待失主去找。还有一种线下方式，就是放在丢失的地方，等失主认领，这种方法经常造成食堂、图书馆堆积大量丢失证件，无人认领，为此，我们想到了这个解决方案。当捡到一张丢失的证件，用手机或电脑采集好证件正面图片，通过我们的系统，识别出人脸的主人是谁，辅助方案是识别文字，以此提高系统的准确度（方案的前提是拥有学校所有学生信息，这个已经和相关老师商量好了，可以提供数据库），当获取失主的信息后，就有了联系方式，然后后台自动给失主发送招领信息，注明时间地点，省时省力。</p>
-        
-          <a class="article-more-a" href="/2018/10/29/校园丢失证件查找失主系统/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/29/校园丢失证件查找失主系统/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
-    </nav>
+  
+
+  
+  <div id="SOHUCS" sid="JSON语法" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
+  
+
+  
+
   
 
 
@@ -610,8 +411,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
