@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/"/>
-  <updated>2019-04-22T08:41:23.938Z</updated>
+  <updated>2019-05-21T06:26:09.171Z</updated>
   <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>search</title>
+    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/05/21/search/"/>
+    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/05/21/search/</id>
+    <published>2019-05-21T05:54:41.000Z</published>
+    <updated>2019-05-21T06:26:09.171Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一、Google插件"><a href="#一、Google插件" class="headerlink" title="一、Google插件"></a>一、Google插件</h2><p><img src="https://raw.githubusercontent.com/ljgithub669/pictures_/master/search/20190521135615.png" alt=""></p><a id="more"></a><ol><li>插件下载网址：<a href="https://chrome-extension-downloader.com/f8bc4696d26b9b2dac1ec27517637f7e/bkhaagjahfmjljalopjnoealnfndnagc.crx" target="_blank" rel="noopener">Chrome Extension Downloader</a></li></ol><blockquote><p>输入插件id即可下载</p></blockquote><p><img src="https://raw.githubusercontent.com/ljgithub669/pictures_/master/search/20190521142007.png" alt=""></p><p>下载后拖入扩展程序界面，安装即可</p><ol><li>常用插件ID</li></ol><p><strong>PP谷歌访问助手-永久免费-不限时<br>1.8.1：</strong>kahndhhhcnignmbbpiobmdlgjhgfkfil</p><p><strong>谷歌访问助手<br>2.3.0：</strong>gocklaboggjfkolaknpbhddbaopcepfp</p><p><strong>Octotree<br>3.0.7：</strong>bkhaagjahfmjljalopjnoealnfndnagc</p><p><strong>全能二维码<br>2.2.1：</strong>ejadepcppnegmgmndhbhpaicoffamngd</p><p><strong>下载+<br>1.6.7：</strong>gokgophibdidjjpildcdbfpmcahilaaf</p><ol><li>插件下载地址(self)</li></ol><p><a href=""></a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;一、Google插件&quot;&gt;&lt;a href=&quot;#一、Google插件&quot; class=&quot;headerlink&quot; title=&quot;一、Google插件&quot;&gt;&lt;/a&gt;一、Google插件&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ljgithub669/pictures_/master/search/20190521135615.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>JSON语法</title>
@@ -401,26 +421,6 @@
     
       &lt;h2 id=&quot;一、环境&quot;&gt;&lt;a href=&quot;#一、环境&quot; class=&quot;headerlink&quot; title=&quot;一、环境&quot;&gt;&lt;/a&gt;一、环境&lt;/h2&gt;&lt;p&gt;VS2015、opencv3.4、海康摄像头（DS-2CD3T20D_I5）&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;目的&lt;/strong&gt;：使用opencv，通过网线获取摄像头采集的视频信息，然后对视频信息进行处理。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++的一些小程序</title>
-    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/08/09/C-%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/08/09/C-的一些小程序/</id>
-    <published>2018-08-09T05:20:22.000Z</published>
-    <updated>2018-08-17T15:17:15.073Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一、获取系统时间并创建文件夹"><a href="#一、获取系统时间并创建文件夹" class="headerlink" title="一、获取系统时间并创建文件夹"></a>一、获取系统时间并创建文件夹</h2><a id="more"></a><pre><code>#include &lt;opencv2/opencv.hpp&gt;#include&lt;iostream&gt;#include&lt;windows.h&gt;#include &lt;fstream&gt;#include&lt;iostream&gt;using namespace cv;using namespace std;void save_picture_and_config();//图片来源于摄像头，空格抓拍。最后按秒区分文件夹，每张图片有个配置文件//配置文件和图片名性对应，只是后缀不同void save_picture_and_config() {    SYSTEMTIME sys;    GetLocalTime(&amp;sys);          //获取系统时间    ///int i = 0,j=0;    char path[200];             //设置代表路径的数组    char newpic[256];    char txt_path[256];    VideoCapture capture(0);    while (1) {        Mat frame;        capture &gt;&gt; frame;                //读取帧        imshow(&quot;摄像头&quot;, frame);        char k;        k = waitKey(5);        if (k == 32 || k == 27)          //按空格和Esc拍照        {            imshow(&quot;pic&quot;, frame);            //system(&quot;mkdir new_save&quot;);            //system(&quot;rm -rf save&quot;);            for (int i = 0;i &lt; 20;i++)            {                //创建时间路径文件夹                sprintf_s(path, &quot;mkdir %d\\%d\\%d\\%d\\%d\\%d\\%d&quot;, sys.wYear, sys.wMonth, sys.wDay, sys.wHour, sys.wMinute, sys.wSecond, i);                system(path);                for (int j = 0;j &lt; 48;j++)                {                    //设置图片名称并保存                    sprintf_s(newpic, &quot;./%d/%d/%d/%d/%d/%d/%d/%d_%d.jpg&quot;, sys.wYear, sys.wMonth, sys.wDay, sys.wHour, sys.wMinute, sys.wSecond, i,i, j);                    imwrite(newpic, frame);                    //设置配置文件名称并保存                                                sprintf_s(txt_path, &quot;./%d/%d/%d/%d/%d/%d/%d/%d_%d.config&quot;, sys.wYear, sys.wMonth, sys.wDay, sys.wHour, sys.wMinute, sys.wSecond,i, i, j);                    ofstream out(txt_path);    //写配置文件                    if (out.is_open())         //写文件内容                    {                        out &lt;&lt; sys.wYear &lt;&lt; endl;                        out &lt;&lt; sys.wMonth &lt;&lt; endl;                        out &lt;&lt; sys.wDay &lt;&lt; endl;                        out &lt;&lt; sys.wHour &lt;&lt; endl;                        out &lt;&lt; sys.wMinute &lt;&lt; endl;                        out &lt;&lt; sys.wSecond &lt;&lt; endl;                        out &lt;&lt; &quot;识别车辆的数目：&quot; &lt;&lt; endl;                        out &lt;&lt; &quot;距上边界比例：&quot; &lt;&lt; endl;                        out &lt;&lt; &quot;距下边界比例：&quot; &lt;&lt; endl;                        out.close();                    }                }            }        }    }}int main(){    save_picture_and_config();    //write_config();    return 0;}</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;一、获取系统时间并创建文件夹&quot;&gt;&lt;a href=&quot;#一、获取系统时间并创建文件夹&quot; class=&quot;headerlink&quot; title=&quot;一、获取系统时间并创建文件夹&quot;&gt;&lt;/a&gt;一、获取系统时间并创建文件夹&lt;/h2&gt;
     
     </summary>
     
