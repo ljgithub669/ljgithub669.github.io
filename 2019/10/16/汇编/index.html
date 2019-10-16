@@ -17,7 +17,10 @@
 <meta property="og:description" content="汇编语言和c语言逻辑框架基本一致，无论是顺序执行还是循环，抑或代码的分段结构，都差不多。只是操作更为底层，可以直接改寄存器和存储单元的数据，相应也会繁琐些，不过操作过程更接近实际。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006YKa8tly1g7zxua33uwj30hy0bxmxb.jpg">
-<meta property="og:updated_time" content="2019-10-16T04:40:45.188Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006YKa8tly1g80f7x6ddnj30hy0bxglo.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006YKa8tly1g80fb0jq40j30hy0bxt8v.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006YKa8tly1g80fdldpgmj30hy0bxglq.jpg">
+<meta property="og:updated_time" content="2019-10-16T14:51:03.613Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编">
 <meta name="twitter:description" content="汇编语言和c语言逻辑框架基本一致，无论是顺序执行还是循环，抑或代码的分段结构，都差不多。只是操作更为底层，可以直接改寄存器和存储单元的数据，相应也会繁琐些，不过操作过程更接近实际。">
@@ -194,6 +197,73 @@
 <p>汇编语言和c语言逻辑框架基本一致，无论是顺序执行还是循环，抑或代码的分段结构，都差不多。只是操作更为底层，可以直接改寄存器和存储单元的数据，相应也会繁琐些，不过操作过程更接近实际。</p>
 <a id="more"></a>
 <p><a href="https://blog.csdn.net/u013018721/article/details/51154153" target="_blank" rel="noopener">Reference</a></p>
+<h2 id="一、代码"><a href="#一、代码" class="headerlink" title="一、代码"></a>一、代码</h2><pre><code>;统计一个16位字中&apos;1&apos;的个数
+DATA    SEGMENT
+VAR    DW  1010111100101010B
+COUNT    DB  ?
+DATA    ENDS
+
+STACK    SEGMENT
+    DW  20H  DUP(?)
+STACK    ENDS
+
+CODE    SEGMENT
+    ASSUME  DS:DATA,SS:STACK,CS:CODE
+BEGIN:
+    MOV  AX,DATA
+    MOV  DS,AX
+    MOV  CX,0
+    MOV  AX,VAR
+L2:
+    TEST  AX,0FFFFH      ;判断AX是否为0
+    JZ  OK
+    JS  L1
+    SHL  AX,1
+    JMP  L2
+L1:
+    INC  CX
+    SHL  AX,1
+    JMP  L2
+
+OK:
+    MOV  COUNT,CL
+    MOV  AH,4CH
+    INT  21H
+
+CODE    ENDS
+    END  BEGIN
+</code></pre><h2 id="二、编译"><a href="#二、编译" class="headerlink" title="二、编译"></a>二、编译</h2><p>首先输入<code>mount c u:\debug</code>，将本机目录d:\debug挂载到虚拟磁盘c上，然后进入</p>
+<p><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g80f7x6ddnj30hy0bxglo.jpg" alt="20191016224041.png"></p>
+<ol>
+<li>使用<code>masm count_num_of_1.asm</code>进行编译</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g80fb0jq40j30hy0bxt8v.jpg" alt="20191016224437.png"></p>
+<ol>
+<li>使用<code>link count_num_of_1.obj</code>进行链接</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g80fdldpgmj30hy0bxglq.jpg" alt="20191016224635.png"></p>
+<h2 id="三、调试"><a href="#三、调试" class="headerlink" title="三、调试"></a>三、调试</h2><p>使用<code>debug count_num_of_1.exe</code></p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>参数</th>
+<th>用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>t</td>
+<td>顺序执行一条指令，并显示寄存器状态</td>
+</tr>
+<tr>
+<td>2</td>
+<td>r</td>
+<td>显示寄存器状态，并可以改变寄存器内容</td>
+</tr>
+</tbody>
+</table>
 
       
 
@@ -337,7 +407,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    没有目录
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、代码"><span class="toc-number">1.</span> <span class="toc-text">一、代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、编译"><span class="toc-number">2.</span> <span class="toc-text">二、编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、调试"><span class="toc-number">3.</span> <span class="toc-text">三、调试</span></a></li></ol>
                     </div>
                 </span>
             </div>
