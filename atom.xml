@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/"/>
-  <updated>2019-10-04T03:38:58.692Z</updated>
+  <updated>2019-10-16T04:35:20.138Z</updated>
   <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>汇编</title>
+    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/10/16/%E6%B1%87%E7%BC%96/"/>
+    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/10/16/汇编/</id>
+    <published>2019-10-16T04:29:20.000Z</published>
+    <updated>2019-10-16T04:35:20.138Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>汇编语言和c语言逻辑框架基本一致，无论是顺序执行还是循环，抑或代码的分段结构，都差不多。只是操作更为底层，可以直接改寄存器和存储单元的数据，相应也会繁琐些，不过操作过程更接近实际。</p><a id="more"></a><p><a href="https://blog.csdn.net/u013018721/article/details/51154153" target="_blank" rel="noopener">Reference</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;汇编语言和c语言逻辑框架基本一致，无论是顺序执行还是循环，抑或代码的分段结构，都差不多。只是操作更为底层，可以直接改寄存器和存储单元的数据，相应也会繁琐些，不过操作过程更接近实际。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>再见金华站</title>
@@ -396,27 +416,6 @@
       
         &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
       
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python send mail</title>
-    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/08/24/python-send-mail/"/>
-    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/08/24/python-send-mail/</id>
-    <published>2018-08-23T17:23:15.000Z</published>
-    <updated>2018-08-23T17:38:28.906Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="https://blog.csdn.net/galen2016/article/details/73350606" target="_blank" rel="noopener">参考文章</a></p><h2 id="一、设置"><a href="#一、设置" class="headerlink" title="一、设置"></a>一、设置</h2><p>使用QQ邮箱发送，先要获得发件人QQ邮箱的IMAP/SMTP服务授权码，具体操作：QQ邮箱–&gt;设置–&gt;账户–&gt;IMAP/SMTP服务对应的“开启”按钮–&gt;通过手机发送短信获取授权码<br><a id="more"></a></p><h2 id="二、代码"><a href="#二、代码" class="headerlink" title="二、代码"></a>二、代码</h2><pre><code>#coding=utf-8import smtplibfrom email.mime.text import MIMETextfrom email.header import Header#发送html格式的邮件#发送邮箱sender=&quot;642746796@qq.com&quot;#接收邮箱receiver=&quot;lijie669@outlook.com&quot;#发送邮件主题subject=&quot;居然测试成功了&quot;#发送邮箱服务器smtpserver=&quot;smtp.qq.com&quot;#发送邮箱用户/密码username=&quot;642746796@qq.com&quot;password=&quot;gyuyaqubtptfbfda&quot;#HTML形式的邮件msg=MIMEText(&quot;&lt;html&gt;&lt;h1&gt;牛逼啊！by lijie &lt;/h1&gt;&lt;/html&gt;&quot;,&quot;html&quot;,&quot;utf-8&quot;)msg[&quot;Subject&quot;]=Header(subject,&quot;utf-8&quot;)smtp=smtplib.SMTP_SSL(smtpserver, 465)smtp.login(username,password)smtp.sendmail(sender,receiver,msg.as_string())smtp.quit()</code></pre><h2 id="三、"><a href="#三、" class="headerlink" title="三、"></a>三、</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/galen2016/article/details/73350606&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;参考文章&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;一、设置&quot;&gt;&lt;a href=&quot;#一、设置&quot; class=&quot;headerlink&quot; title=&quot;一、设置&quot;&gt;&lt;/a&gt;一、设置&lt;/h2&gt;&lt;p&gt;使用QQ邮箱发送，先要获得发件人QQ邮箱的IMAP/SMTP服务授权码，具体操作：QQ邮箱–&amp;gt;设置–&amp;gt;账户–&amp;gt;IMAP/SMTP服务对应的“开启”按钮–&amp;gt;通过手机发送短信获取授权码&lt;br&gt;
     
     </summary>
     
