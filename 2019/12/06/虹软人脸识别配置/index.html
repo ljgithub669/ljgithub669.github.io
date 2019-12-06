@@ -30,7 +30,7 @@
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjb1s5j311y0kgq4l.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjdkz0j311y0kgjtd.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjd73cj311y0kgdic.jpg">
-<meta property="og:updated_time" content="2019-12-06T05:14:16.479Z">
+<meta property="og:updated_time" content="2019-12-06T05:29:52.158Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="虹软人脸识别配置">
 <meta name="twitter:description" content="听说虹软开源的人脸识别代码很好用，特地试了一下，准确率的确很高，这里把配置过程记录一下，使用的是2.0版本，因为更高版本有些函数更改，导致使用有问题">
@@ -205,7 +205,7 @@
       
         <p>听说虹软开源的人脸识别代码很好用，特地试了一下，准确率的确很高，这里把配置过程记录一下，使用的是2.0版本，因为更高版本有些函数更改，导致使用有问题</p>
 <a id="more"></a>
-<p><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj5szsj311y0kg779.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj50sbj30os0godhj.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj4yglj30os0godhj.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj40m7j30os0godh8.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj6xunj311y0kgdit.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjafl4j311y0kgdit.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjez2ej311y0kgwhw.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjh9iwj311y0kgtc4.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjb9ghj311y0kgdj3.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj5tm2j311y0kggnl.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjb013j311y0kgwg3.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjb1s5j311y0kgq4l.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjdkz0j311y0kgjtd.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjd73cj311y0kgdic.jpg" alt=""></p>
+<h2 id="配置流程"><a href="#配置流程" class="headerlink" title="配置流程"></a>配置流程</h2><p><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj5szsj311y0kg779.jpg" alt=""><br>红线部分表示环境未配置，找不到文件<br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj50sbj30os0godhj.jpg" alt=""><br>配置虹软的include和opencv的include头文件目录<br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj4yglj30os0godhj.jpg" alt=""><br>配置虹软和opencv的lib库目录<br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj40m7j30os0godh8.jpg" alt=""><br>配置opencv的动态链接库（dll）<br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj6xunj311y0kgdit.jpg" alt=""><br>如图，找不到stdafx.h，这里直接注释就行了<br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjafl4j311y0kgdit.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjez2ej311y0kgwhw.jpg" alt=""><br>如图，出现原因是版本变化引起函数变化，去掉_BASE部分即可<br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjh9iwj311y0kgtc4.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjb9ghj311y0kgdj3.jpg" alt=""><br>接下来输入两张图片，进行人比对<br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj5tm2j311y0kggnl.jpg" alt=""><br>报错如上，需要将opencv的三个动态链接库放在可执行文件目录下<br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjb013j311y0kgwg3.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjb1s5j311y0kgq4l.jpg" alt=""><br>接下来又报错缺少MSVCR120D.dll，这个文件需要到网上下载<br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjdkz0j311y0kgjtd.jpg" alt=""><br>下载后添加到可执行文件目录<br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjd73cj311y0kgdic.jpg" alt=""></p>
 
       
 
@@ -349,7 +349,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    没有目录
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置流程"><span class="toc-number">1.</span> <span class="toc-text">配置流程</span></a></li></ol>
                     </div>
                 </span>
             </div>
