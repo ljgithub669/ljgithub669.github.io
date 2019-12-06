@@ -37,26 +37,6 @@
   </entry>
   
   <entry>
-    <title>PE绕开windows开机</title>
-    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/10/16/PE%E7%BB%95%E5%BC%80windows%E5%BC%80%E6%9C%BA/"/>
-    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/10/16/PE绕开windows开机/</id>
-    <published>2019-10-16T15:47:07.000Z</published>
-    <updated>2019-10-16T15:55:50.040Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>搜索WinPE下载<br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g80h7fa702j311y0jm7a7.jpg" alt="20191016234915.png"></p><a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;搜索WinPE下载&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/006YKa8tly1g80h7fa702j311y0jm7a7.jpg&quot; alt=&quot;20191016234915.png&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
     <title>汇编</title>
     <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/10/16/%E6%B1%87%E7%BC%96/"/>
     <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/10/16/汇编/</id>
@@ -414,6 +394,26 @@
     
       &lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/34681168&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;reference–ANN,CNN,DNN,RNN&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/mao_xiao_feng/article/details/53048213&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;reference–ANN神经网络原理&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python语法细节</title>
+    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/09/19/python%E8%AF%AD%E6%B3%95%E7%BB%86%E8%8A%82/"/>
+    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/09/19/python语法细节/</id>
+    <published>2018-09-19T06:00:33.000Z</published>
+    <updated>2018-09-19T06:05:17.038Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一、import部分"><a href="#一、import部分" class="headerlink" title="一、import部分"></a>一、import部分</h2><p>Python文件中，我们经常看到<code>import tensorflow as tf</code>，<code>import os</code>，<code>from tf_train import train</code>等，有时候却不能理解具体的意思。虽然挺简单，却给我带来了一些困扰。</p><a id="more"></a><p>下面就来介绍一下：</p><blockquote><p>from tf_train import train<br>这个是从tf_train这个文件内调用train这个函数</p></blockquote><blockquote><p>import os<br>调用os这个python文件，使用函数时，就要这样用<code>os.getcwdu()</code></p></blockquote><blockquote><p>import tensorflow as tf<br>用tf代替tensorflow，使用时这么用<code>tf.trainable_variables()</code></p></blockquote><h2 id="二、with用法"><a href="#二、with用法" class="headerlink" title="二、with用法"></a>二、with用法</h2><ul><li>with……as……<br><a href="https://blog.csdn.net/u012609509/article/details/72911564" target="_blank" rel="noopener">reference</a></li></ul><p>with A as B，把A的值给B，下面的执行过程还不了解</p><ul><li>with</li></ul><p>不知道</p><h2 id="三、for……in……"><a href="#三、for……in……" class="headerlink" title="三、for……in……"></a>三、for……in……</h2><p>一个迭代器，也就是循环</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for i in range(1, 10):</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure><p>结果是顺序显示1~9的数字</p><h2 id="四、函数使用"><a href="#四、函数使用" class="headerlink" title="四、函数使用"></a>四、函数使用</h2><ul><li><strong>参数</strong></li></ul><p><a href="https://www.cnblogs.com/yuki-lau/archive/2013/05/28/3103303.html" target="_blank" rel="noopener">reference</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;一、import部分&quot;&gt;&lt;a href=&quot;#一、import部分&quot; class=&quot;headerlink&quot; title=&quot;一、import部分&quot;&gt;&lt;/a&gt;一、import部分&lt;/h2&gt;&lt;p&gt;Python文件中，我们经常看到&lt;code&gt;import tensorflow as tf&lt;/code&gt;，&lt;code&gt;import os&lt;/code&gt;，&lt;code&gt;from tf_train import train&lt;/code&gt;等，有时候却不能理解具体的意思。虽然挺简单，却给我带来了一些困扰。&lt;/p&gt;
     
     </summary>
     
