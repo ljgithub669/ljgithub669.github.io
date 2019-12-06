@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/"/>
-  <updated>2019-10-16T15:28:43.033Z</updated>
+  <updated>2019-12-06T05:14:16.479Z</updated>
   <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>虹软人脸识别配置</title>
+    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/12/06/%E8%99%B9%E8%BD%AF%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E9%85%8D%E7%BD%AE/"/>
+    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/12/06/虹软人脸识别配置/</id>
+    <published>2019-12-06T05:08:22.000Z</published>
+    <updated>2019-12-06T05:14:16.479Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>听说虹软开源的人脸识别代码很好用，特地试了一下，准确率的确很高，这里把配置过程记录一下，使用的是2.0版本，因为更高版本有些函数更改，导致使用有问题</p><a id="more"></a><p><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj5szsj311y0kg779.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj50sbj30os0godhj.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj4yglj30os0godhj.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj40m7j30os0godh8.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj6xunj311y0kgdit.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjafl4j311y0kgdit.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjez2ej311y0kgwhw.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjh9iwj311y0kgtc4.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjb9ghj311y0kgdj3.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcj5tm2j311y0kggnl.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjb013j311y0kgwg3.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjb1s5j311y0kgq4l.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjdkz0j311y0kgjtd.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g9mxcjd73cj311y0kgdic.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;听说虹软开源的人脸识别代码很好用，特地试了一下，准确率的确很高，这里把配置过程记录一下，使用的是2.0版本，因为更高版本有些函数更改，导致使用有问题&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PE绕开windows开机</title>
+    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/10/16/PE%E7%BB%95%E5%BC%80windows%E5%BC%80%E6%9C%BA/"/>
+    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/10/16/PE绕开windows开机/</id>
+    <published>2019-10-16T15:47:07.000Z</published>
+    <updated>2019-10-16T15:55:50.040Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>搜索WinPE下载<br><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g80h7fa702j311y0jm7a7.jpg" alt="20191016234915.png"></p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;搜索WinPE下载&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/006YKa8tly1g80h7fa702j311y0jm7a7.jpg&quot; alt=&quot;20191016234915.png&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>汇编</title>
@@ -163,9 +203,9 @@
     <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/03/30/linux%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
     <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2019/03/30/linux常用操作/</id>
     <published>2019-03-30T02:44:28.000Z</published>
-    <updated>2019-03-30T04:58:59.219Z</updated>
+    <updated>2019-10-29T09:14:14.372Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="1-配置环境"><a href="#1-配置环境" class="headerlink" title="1. 配置环境"></a>1. 配置环境</h2><p>通常使用<code>pip install tensorflow-gpu==1.11.0</code>直接下载对应版本</p><p>当有<code>requirements.txt</code>文件时，直接使用<code>pip install -r ./requirements.txt</code>进行下载</p><a id="more"></a><h2 id="2-压缩打包"><a href="#2-压缩打包" class="headerlink" title="2. 压缩打包"></a>2. 压缩打包</h2><p><strong>压缩文件：</strong><code>tar -zcvf tensor.tar.gz tensorflow-yolov3/</code></p><p>从服务器将文件下载至本机：<code>sz tensor.tar.gz</code></p><p><strong>解压缩：</strong><code>unrar e CASIA2.rar ./CASIA2</code></p><h2 id="3-查看文件数目"><a href="#3-查看文件数目" class="headerlink" title="3. 查看文件数目"></a>3. 查看文件数目</h2><p><code>ls CASIA2 | wc -l</code></p><p><strong>解释：</strong></p><table><thead><tr><th style="text-align:center">命令</th><th style="text-align:center">解释</th></tr></thead><tbody><tr><td style="text-align:center">wc -c fiel</td><td style="text-align:center">字节数</td></tr><tr><td style="text-align:center">wc -l file</td><td style="text-align:center">行数</td></tr><tr><td style="text-align:center">wc -w file</td><td style="text-align:center">字符数</td></tr><tr><td style="text-align:center">wc file</td><td style="text-align:center">行数 字符数 字节 file</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="1-配置环境"><a href="#1-配置环境" class="headerlink" title="1. 配置环境"></a>1. 配置环境</h2><p>通常使用<code>pip install tensorflow-gpu==1.11.0</code>直接下载对应版本</p><p>当有<code>requirements.txt</code>文件时，直接使用<code>pip install -r ./requirements.txt</code>进行下载</p><a id="more"></a><h2 id="2-压缩打包"><a href="#2-压缩打包" class="headerlink" title="2. 压缩打包"></a>2. 压缩打包</h2><p><strong>压缩文件：</strong><code>tar -zcvf tensor.tar.gz tensorflow-yolov3/</code></p><p>从服务器将文件下载至本机：<code>sz tensor.tar.gz</code></p><p><strong>解压缩：</strong><code>unrar e CASIA2.rar ./CASIA2</code></p><h2 id="3-查看文件数目"><a href="#3-查看文件数目" class="headerlink" title="3. 查看文件数目"></a>3. 查看文件数目</h2><p><code>ls CASIA2 | wc -l</code></p><p><strong>解释：</strong></p><table><thead><tr><th style="text-align:center">命令</th><th style="text-align:center">解释</th></tr></thead><tbody><tr><td style="text-align:center">wc -c fiel</td><td style="text-align:center">字节数</td></tr><tr><td style="text-align:center">wc -l file</td><td style="text-align:center">行数</td></tr><tr><td style="text-align:center">wc -w file</td><td style="text-align:center">字符数</td></tr><tr><td style="text-align:center">wc file</td><td style="text-align:center">行数 字符数 字节 file</td></tr></tbody></table><h2 id="4-Anconda及pip应用"><a href="#4-Anconda及pip应用" class="headerlink" title="4.Anconda及pip应用"></a>4.Anconda及pip应用</h2><p>~/.bashrc用于保存本用户的全局变量，/etc/profile用来保存全局变量</p><h3 id="anconda3"><a href="#anconda3" class="headerlink" title="anconda3"></a>anconda3</h3><p>一般权限的anconda会安装在<code>/home/用户/anconda3</code>，root权限会安装在<code>/root/anconda3</code>，而且两者不冲突，个人建议直接装在root权限下，并且把pip也改成全局模式，这样就不需要在pip和pip3之间切换了。</p><p><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g8f587nbwyj30fw05nweu.jpg" alt=""></p><p><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g8f587naetj30fd042dg1.jpg" alt=""></p><p>anconda安装完成后，需要配置环境变量，使用：</p><p>sudo gedit /root/.bashrc</p><p>在最后一行添加：</p><p>export PATH=”/root/anconda3/bin:$PATH”</p><p>退出然后应用到环境</p><p>source /root/.bashrc</p><p>(经测试，root权限和普通权限下的anconda不能同时存在，智只能取其一)</p><p><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g8f6hir1naj30ho081my6.jpg" alt=""></p><h3 id="py36环境搭建"><a href="#py36环境搭建" class="headerlink" title="py36环境搭建"></a>py36环境搭建</h3><p>conda create -n py36 python=3.6</p><p><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g8f6ncoefdj30en09vjrx.jpg" alt=""></p><p>将其换为全局变量</p><p>使用export PATH=”/root/anconda3/envs/py36/bin:$PATH”</p>]]></content>
     
     <summary type="html">
     
@@ -374,49 +414,6 @@
     
       &lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/34681168&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;reference–ANN,CNN,DNN,RNN&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/mao_xiao_feng/article/details/53048213&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;reference–ANN神经网络原理&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python语法细节</title>
-    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/09/19/python%E8%AF%AD%E6%B3%95%E7%BB%86%E8%8A%82/"/>
-    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/09/19/python语法细节/</id>
-    <published>2018-09-19T06:00:33.000Z</published>
-    <updated>2018-09-19T06:05:17.038Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一、import部分"><a href="#一、import部分" class="headerlink" title="一、import部分"></a>一、import部分</h2><p>Python文件中，我们经常看到<code>import tensorflow as tf</code>，<code>import os</code>，<code>from tf_train import train</code>等，有时候却不能理解具体的意思。虽然挺简单，却给我带来了一些困扰。</p><a id="more"></a><p>下面就来介绍一下：</p><blockquote><p>from tf_train import train<br>这个是从tf_train这个文件内调用train这个函数</p></blockquote><blockquote><p>import os<br>调用os这个python文件，使用函数时，就要这样用<code>os.getcwdu()</code></p></blockquote><blockquote><p>import tensorflow as tf<br>用tf代替tensorflow，使用时这么用<code>tf.trainable_variables()</code></p></blockquote><h2 id="二、with用法"><a href="#二、with用法" class="headerlink" title="二、with用法"></a>二、with用法</h2><ul><li>with……as……<br><a href="https://blog.csdn.net/u012609509/article/details/72911564" target="_blank" rel="noopener">reference</a></li></ul><p>with A as B，把A的值给B，下面的执行过程还不了解</p><ul><li>with</li></ul><p>不知道</p><h2 id="三、for……in……"><a href="#三、for……in……" class="headerlink" title="三、for……in……"></a>三、for……in……</h2><p>一个迭代器，也就是循环</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for i in range(1, 10):</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure><p>结果是顺序显示1~9的数字</p><h2 id="四、函数使用"><a href="#四、函数使用" class="headerlink" title="四、函数使用"></a>四、函数使用</h2><ul><li><strong>参数</strong></li></ul><p><a href="https://www.cnblogs.com/yuki-lau/archive/2013/05/28/3103303.html" target="_blank" rel="noopener">reference</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;一、import部分&quot;&gt;&lt;a href=&quot;#一、import部分&quot; class=&quot;headerlink&quot; title=&quot;一、import部分&quot;&gt;&lt;/a&gt;一、import部分&lt;/h2&gt;&lt;p&gt;Python文件中，我们经常看到&lt;code&gt;import tensorflow as tf&lt;/code&gt;，&lt;code&gt;import os&lt;/code&gt;，&lt;code&gt;from tf_train import train&lt;/code&gt;等，有时候却不能理解具体的意思。虽然挺简单，却给我带来了一些困扰。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>namespace用法</title>
-    <link href="http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/08/31/namespace%E7%94%A8%E6%B3%95/"/>
-    <id>http://p6hlch5jf.bkt.clouddn.com/dog.jpg/2018/08/31/namespace用法/</id>
-    <published>2018-08-31T02:16:02.000Z</published>
-    <updated>2018-08-31T02:43:58.930Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="http://blog.sina.com.cn/s/blog_af68a2c201015pqo.html" target="_blank" rel="noopener">Reference</a></p><h2 id="一、来源"><a href="#一、来源" class="headerlink" title="一、来源"></a>一、来源</h2><p>因为c++文件由不同的人所写，故难免会有命名的重复，比如甲在header1.h里定义了class A, 在A中又定义了void fun（），而乙在header2.h里也定义了class A，并且同样定义了void fun（）。当在主函数内调用时，就会发生错误。为了避免这种错误，有人想出用作用域的方法解决，将header1.h放在作用域ns1里，把leader2.h放在作用域ns2里，使用时类似于绝对路径，因为它已经是唯一的了，ns1::fun()。</p><h2 id="二、使用"><a href="#二、使用" class="headerlink" title="二、使用"></a>二、使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">namespace ns1</span><br><span class="line">&#123;</span><br><span class="line">class A</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">void fun()</span><br><span class="line">&#123;</span><br><span class="line">cout&lt;&lt;&quot;Hello&quot;&lt;&lt;endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
     
     </summary>
     

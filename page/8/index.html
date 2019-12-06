@@ -156,6 +156,198 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Tensorflow学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/14/Tensorflow学习笔记/">Tensorflow学习笔记</a>
+    </h1>
+  
+
+
+
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/04/14/Tensorflow学习笔记/" class="pageViews">0</span>次
+  </a>
+
+
+
+        
+        <a href="/2018/04/14/Tensorflow学习笔记/" class="archive-article-date">
+  	<time datetime="2018-04-14T15:15:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://blog.csdn.net/huachao1001/article/details/78501928" target="_blank" rel="noopener">reference</a></p>
+<h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><h2 id="二、模型文件"><a href="#二、模型文件" class="headerlink" title="二、模型文件"></a>二、模型文件</h2><p>在checkpoint_dir目录下保存的文件结构</p>
+<pre><code>--checkpoint_dir
+    --checkpoint    //文本文件，可以通过此文件指定使用哪个model
+    --MyModel.meta  //是pd文件，包含变量、op、集合等
+    --MyModel.data-00000-of-00001   //与下面的合称ckpt文件，属于二进制文件，保存了所有的weights、biases、gradients（梯度）等变量
+    --MyModel.index
+</code></pre><h2 id="三、模型保存"><a href="#三、模型保存" class="headerlink" title="三、模型保存"></a>三、模型保存</h2><pre><code>import tensorflow as tf
+
+w1 = tf.Variable(tf.random_normal(shape=[2]), name=&apos;w1&apos;)
+w2 = tf.Variable(tf.random_normal(shape=[5]), name=&apos;w2&apos;)
+saver = tf.train.Saver()
+sess = tf.Session()
+sess.run(tf.global_variables_initializer())
+saver.save(sess, &apos;./checkpoint_dir/MyModel&apos;)
+</code></pre><h2 id="四、导入训练好的模型"><a href="#四、导入训练好的模型" class="headerlink" title="四、导入训练好的模型"></a>四、导入训练好的模型</h2><pre><code>import tensorflow as tf
+with tf.Session() as sess:    
+    saver = tf.train.import_meta_graph(&apos;./checkpoint_dir/MyModel.meta&apos;)
+    saver.restore(sess,tf.train.latest_checkpoint(&apos;./checkpoint_dir&apos;))
+    print(sess.run(&apos;w1:0&apos;))
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/14/Tensorflow学习笔记/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-C-C-及Python的自定义引包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/14/C-C-及Python的自定义引包/">C/C++及Python的自定义引包</a>
+    </h1>
+  
+
+
+
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/04/14/C-C-及Python的自定义引包/" class="pageViews">0</span>次
+  </a>
+
+
+
+        
+        <a href="/2018/04/14/C-C-及Python的自定义引包/" class="archive-article-date">
+  	<time datetime="2018-04-14T13:09:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、C-C-的自定义头文件引用"><a href="#一、C-C-的自定义头文件引用" class="headerlink" title="一、C/C++的自定义头文件引用"></a>一、C/C++的自定义头文件引用</h1><ul>
+<li>为什么要写这篇文章呢？</li>
+</ul>
+<blockquote>
+<p>当我们用C/C++写程序时，头文件引用每次都会用到<code>#include &lt;stdio.h&gt;</code>或<code>#include &lt;iostream&gt;</code>，并且这个头文件还放在编译软件内部，需要自己去找，一般放在include包含头文件的地方。</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2018/04/14/C-C-及Python的自定义引包/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/14/C-C-及Python的自定义引包/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-argc和argv" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -422,194 +614,6 @@
 
 
   
-    <article id="post-Linux的诞生" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/27/Linux的诞生/">Linux的诞生</a>
-    </h1>
-  
-
-
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/03/27/Linux的诞生/" class="pageViews">0</span>次
-  </a>
-
-
-
-        
-        <a href="/2018/03/27/Linux的诞生/" class="archive-article-date">
-  	<time datetime="2018-03-27T04:41:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>摘自微信公众号</p>
-</blockquote>
-<ul>
-<li><p>你知道Linux系统有多牛吗？</p>
-</li>
-<li><p>迄今为止，在全球范围内：</p>
-</li>
-<li><p>80%以上的智能手机用的都是基于Linux内核的Android系统。</p>
-</li>
-<li><p>全球超级计算机排名前500中有98%都在用Linux，包括中国制造、世界超算第一的神威太湖之光。</p>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2018/03/27/Linux的诞生/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/27/Linux的诞生/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-MV" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/24/MV/">MV</a>
-    </h1>
-  
-
-
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/03/24/MV/" class="pageViews">0</span>次
-  </a>
-
-
-
-        
-        <a href="/2018/03/24/MV/" class="archive-article-date">
-  	<time datetime="2018-03-24T12:06:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>插入音乐</strong></p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="350" height="500" src="http://music.163.com/song/449272168/?userid=590854430"><br></iframe> 
-
-<p><em>代码如下</em></p>
-<pre><code>&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=380 height=500   
-src=&quot;http://music.163.com/song/449272168/?userid=590854430&quot;&gt;  
-&lt;/iframe&gt; 
-</code></pre><p><strong>插入视频</strong></p>
-<p>《东风第一枝》 <em>视频很美，古风味十足，美景、美人、美哉！</em></p>
-<iframe height="300" width="350" src=" http://music.163.com/video/4241F55E7A61DB3A42C68E28D6DA3FC8/?userid=590854430" frameborder="0" allowfullscreen><br></iframe> 
-
-<p><em>代码如下</em></p>
-<pre><code>&lt;iframe   
-height=300 width=380   
-src=&quot; http://music.163.com/video/4241F55E7A61DB3A42C68E28D6DA3FC8/?userid=590854430&quot;   
-frameborder=0 allowfullscreen&gt;  
-&lt;/iframe&gt; 
-</code></pre>
-        
-          <a class="article-more-a" href="/2018/03/24/MV/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/24/MV/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/7/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/9/">Next &raquo;</a>
@@ -795,11 +799,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
               </li>
             
             <div class="clearfix"></div>

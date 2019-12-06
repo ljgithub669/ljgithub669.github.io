@@ -16,10 +16,15 @@
 <meta property="og:site_name" content="Aspire">
 <meta property="og:description" content="1. 配置环境通常使用pip install tensorflow-gpu==1.11.0直接下载对应版本 当有requirements.txt文件时，直接使用pip install -r ./requirements.txt进行下载">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-30T04:58:59.219Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006YKa8tly1g8f587nbwyj30fw05nweu.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006YKa8tly1g8f587naetj30fd042dg1.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006YKa8tly1g8f6hir1naj30ho081my6.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006YKa8tly1g8f6ncoefdj30en09vjrx.jpg">
+<meta property="og:updated_time" content="2019-10-29T09:14:14.372Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux常用操作">
 <meta name="twitter:description" content="1. 配置环境通常使用pip install tensorflow-gpu==1.11.0直接下载对应版本 当有requirements.txt文件时，直接使用pip install -r ./requirements.txt进行下载">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006YKa8tly1g8f587nbwyj30fw05nweu.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Aspire" type="application/atom+xml">
   
@@ -222,6 +227,22 @@
 </tr>
 </tbody>
 </table>
+<h2 id="4-Anconda及pip应用"><a href="#4-Anconda及pip应用" class="headerlink" title="4.Anconda及pip应用"></a>4.Anconda及pip应用</h2><p>~/.bashrc用于保存本用户的全局变量，/etc/profile用来保存全局变量</p>
+<h3 id="anconda3"><a href="#anconda3" class="headerlink" title="anconda3"></a>anconda3</h3><p>一般权限的anconda会安装在<code>/home/用户/anconda3</code>，root权限会安装在<code>/root/anconda3</code>，而且两者不冲突，个人建议直接装在root权限下，并且把pip也改成全局模式，这样就不需要在pip和pip3之间切换了。</p>
+<p><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g8f587nbwyj30fw05nweu.jpg" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g8f587naetj30fd042dg1.jpg" alt=""></p>
+<p>anconda安装完成后，需要配置环境变量，使用：</p>
+<p>sudo gedit /root/.bashrc</p>
+<p>在最后一行添加：</p>
+<p>export PATH=”/root/anconda3/bin:$PATH”</p>
+<p>退出然后应用到环境</p>
+<p>source /root/.bashrc</p>
+<p>(经测试，root权限和普通权限下的anconda不能同时存在，智只能取其一)</p>
+<p><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g8f6hir1naj30ho081my6.jpg" alt=""></p>
+<h3 id="py36环境搭建"><a href="#py36环境搭建" class="headerlink" title="py36环境搭建"></a>py36环境搭建</h3><p>conda create -n py36 python=3.6</p>
+<p><img src="http://ww1.sinaimg.cn/large/006YKa8tly1g8f6ncoefdj30en09vjrx.jpg" alt=""></p>
+<p>将其换为全局变量</p>
+<p>使用export PATH=”/root/anconda3/envs/py36/bin:$PATH”</p>
 
       
 
@@ -374,7 +395,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-配置环境"><span class="toc-number">1.</span> <span class="toc-text">1. 配置环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-压缩打包"><span class="toc-number">2.</span> <span class="toc-text">2. 压缩打包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-查看文件数目"><span class="toc-number">3.</span> <span class="toc-text">3. 查看文件数目</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-配置环境"><span class="toc-number">1.</span> <span class="toc-text">1. 配置环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-压缩打包"><span class="toc-number">2.</span> <span class="toc-text">2. 压缩打包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-查看文件数目"><span class="toc-number">3.</span> <span class="toc-text">3. 查看文件数目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Anconda及pip应用"><span class="toc-number">4.</span> <span class="toc-text">4.Anconda及pip应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#anconda3"><span class="toc-number">4.1.</span> <span class="toc-text">anconda3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#py36环境搭建"><span class="toc-number">4.2.</span> <span class="toc-text">py36环境搭建</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -584,11 +605,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
               </li>
             
             <div class="clearfix"></div>
